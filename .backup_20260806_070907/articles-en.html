@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peptides Decoded · All 6 issues</title>
+<style>
+  :root {
+    --ink: #14140f; --paper: #f4f0e6; --paper-2: #ece6d6;
+    --accent: #d7442f; --accent-2: #1f5c4d; --gold: #c98a1e;
+    --line: #14140f; --muted: #5c5749;
+    --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+    --mono: "SFMono-Regular", "SF Mono", Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--serif); line-height: 1.62; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 0 28px; }
+  header.masthead { border-bottom: 3px solid var(--line); padding: 16px 0 12px; position: sticky; top: 0; background: var(--paper); z-index: 40; }
+  .masthead-inner { max-width: 820px; margin: 0 auto; padding: 0 28px; display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 6px; }
+  .logo { font-size: clamp(22px, 4vw, 30px); font-weight: 800; letter-spacing: -.02em; }
+  .logo em { font-style: italic; color: var(--accent); }
+  .masthead-meta { font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em; color: var(--muted); text-transform: uppercase; }
+  .masthead-meta a { color: var(--accent); text-decoration: none; }
+  nav.toc { border-bottom: 1.5px solid var(--line); background: var(--paper-2); }
+  .toc-inner { max-width: 820px; margin: 0 auto; padding: 12px 28px; display: flex; gap: 6px 18px; flex-wrap: wrap; font-family: var(--mono); font-size: 11.5px; letter-spacing: .04em; }
+  .toc-inner a { color: var(--ink); text-decoration: none; border-bottom: 1.5px solid transparent; padding-bottom: 1px; }
+  .toc-inner a:hover { border-color: var(--accent); color: var(--accent); }
+  .intro { padding: 46px 0 30px; border-bottom: 1.5px solid var(--line); }
+  .intro h1 { font-size: clamp(30px, 6vw, 52px); line-height: 1; letter-spacing: -.03em; }
+  .intro p { margin-top: 18px; font-size: 18px; max-width: 60ch; color: #2c2a22; }
+  .intro .meta-note { margin-top: 14px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+  article { padding: 52px 0; border-bottom: 1.5px solid var(--line); scroll-margin-top: 70px; }
+  .ed-head { display: flex; align-items: baseline; gap: 16px; }
+  .ed-no { font-family: var(--mono); font-weight: 700; font-size: 44px; color: var(--accent); line-height: .8; }
+  .ed-tag { font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; border: 1.5px solid var(--line); padding: 4px 8px; align-self: center; }
+  .ed-tag.cos { color: var(--accent-2); border-color: var(--accent-2); }
+  .ed-tag.glp { color: var(--accent); border-color: var(--accent); }
+  .ed-tag.onc { color: var(--gold); border-color: var(--gold); }
+  h2.title { font-size: clamp(26px, 4.6vw, 40px); line-height: 1.04; letter-spacing: -.02em; margin: 14px 0 4px; }
+  .subtitle { font-size: 19px; font-style: italic; color: var(--muted); margin-bottom: 22px; }
+  article h3 { font-size: 21px; letter-spacing: -.01em; margin: 30px 0 10px; }
+  article p { font-size: 17.5px; margin: 12px 0; }
+  article p.lead { font-size: 20px; line-height: 1.5; }
+  article ul { margin: 12px 0 12px 22px; font-size: 17px; }
+  article li { margin: 7px 0; }
+  strong { font-weight: 700; }
+  .drop::first-letter { font-size: 3.4em; float: left; line-height: .74; padding: 6px 10px 0 0; font-weight: 800; color: var(--accent); }
+  .verdict-box { border: 2px solid var(--line); background: #fffdf7; margin: 24px 0; }
+  .verdict-box .vh { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; padding: 10px 16px; border-bottom: 1.5px solid var(--line); color: var(--muted); }
+  .vrow { display: flex; justify-content: space-between; align-items: baseline; padding: 11px 16px; border-bottom: 1px dotted rgba(20,20,15,.25); }
+  .vrow:last-child { border-bottom: none; }
+  .vrow .k { font-size: 16px; }
+  .vrow .v { font-family: var(--mono); font-size: 12.5px; font-weight: 700; }
+  .yes { color: var(--accent-2); } .weak { color: var(--gold); } .no { color: var(--accent); }
+  table.data { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 15px; }
+  table.data th, table.data td { border: 1px solid rgba(20,20,15,.3); padding: 9px 11px; text-align: left; vertical-align: top; }
+  table.data th { background: var(--paper-2); font-family: var(--mono); font-size: 11px; letter-spacing: .05em; text-transform: uppercase; }
+  table.data td.num { font-family: var(--mono); font-weight: 700; white-space: nowrap; }
+  .flag { border-left: 4px solid var(--accent); background: rgba(215,68,47,.06); padding: 16px 18px; margin: 22px 0; font-size: 16.5px; }
+  .flag .fh { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); font-weight: 700; display: block; margin-bottom: 6px; }
+  .news { border-left: 4px solid var(--gold); background: rgba(201,138,30,.08); padding: 16px 18px; margin: 22px 0; font-size: 16.5px; }
+  .news .fh { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); font-weight: 700; display: block; margin-bottom: 6px; }
+  .takeaway { border: 2px dashed var(--accent-2); background: rgba(31,92,77,.06); padding: 18px 20px; margin: 24px 0; }
+  .takeaway .th { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-2); font-weight: 700; margin-bottom: 8px; }
+  .takeaway ul { margin: 6px 0 0 20px; }
+  .sources { margin-top: 26px; font-family: var(--mono); font-size: 12px; color: var(--muted); line-height: 1.7; border-top: 1px solid rgba(20,20,15,.25); padding-top: 12px; }
+  .sources a { color: var(--muted); }
+  .sources .sh { text-transform: uppercase; letter-spacing: .1em; display: block; margin-bottom: 6px; color: var(--ink); }
+  .bars { margin: 18px 0; }
+  .bar-row { display: grid; grid-template-columns: 150px 1fr 62px; align-items: center; gap: 12px; margin: 12px 0; }
+  .bar-row .name { font-size: 14px; }
+  .bar-row .name span { font-size: 11px; color: var(--muted); }
+  .bar-track { height: 18px; background: var(--paper-2); border: 1.5px solid var(--line); overflow: hidden; }
+  .bar-fill { height: 100%; width: 0; transition: width 1.1s cubic-bezier(.2,.8,.2,1); }
+  .bar-fill.a { background: var(--accent); } .bar-fill.b { background: var(--accent-2); } .bar-fill.c { background: var(--gold); }
+  .bar-row .pct { font-family: var(--mono); font-size: 13px; font-weight: 700; text-align: right; }
+  footer { border-top: 3px solid var(--line); padding: 40px 0 90px; }
+  .disclaimer { font-family: var(--mono); font-size: 11px; color: var(--muted); line-height: 1.7; max-width: 74ch; }
+  .foot-brand { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: .08em; margin-top: 16px; }
+  @media (max-width: 620px){ .bar-row { grid-template-columns: 110px 1fr 54px; } .ed-no { font-size: 34px; } }
+  @media print { header.masthead, nav.toc { position: static; } article, .verdict-box, table.data { break-inside: avoid; } }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="logo">Peptides <em>Decoded</em></div>
+    <div class="masthead-meta">All 6 issues · Full edition 2026 · <a href="articles.html">FR</a></div>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="toc-inner">
+    <a href="#n1">01 · Cosmetics</a>
+    <a href="#n2">02 · GLP-1</a>
+    <a href="#n3">03 · Anticancer</a>
+    <a href="#n4">04 · Black market</a>
+    <a href="#n5">05 · Future</a>
+    <a href="#n6">06 · Recap</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="intro">
+    <h1>Peptides, without the storytelling.</h1>
+    <p class="lead">Six issues, one principle: every figure links to its primary publication. Where the data is solid, we call it. Where it's fragile, we say so. Here's the full set.</p>
+    <p class="meta-note">Verified August 2026 against NEJM, Frontiers in Medicine, ClinicalTrials.gov, FDA, BBC and Eli Lilly.</p>
+  </div>
+</div>
+
+<!-- N1 -->
+<article id="n1">
+  <div class="wrap">
+    <div class="ed-head"><span class="ed-no">01</span><span class="ed-tag cos">Cosmetics</span></div>
+    <h2 class="title">Do peptides actually do anything to your skin?</h2>
+    <p class="subtitle">Science vs marketing: what 19 clinical trials show — and hide.</p>
+
+    <p class="drop">A meta-analysis published on 17 March 2026 in <em>Frontiers in Medicine</em> did what few brands dare to: pool 19 randomised controlled trials (1,341 participants, PRISMA protocol, PROSPERO registration) and look coldly at what peptides do to skin. The verdict is more nuanced than any packaging.</p>
+
+    <div class="verdict-box">
+      <div class="vh">Pooled verdict · Nukaly et al., 2026</div>
+      <div class="vrow"><span class="k">Hydration</span><span class="v yes">✓ SIGNIFICANT · MD 5.80 (p&lt;0.01)</span></div>
+      <div class="vrow"><span class="k">Brightness</span><span class="v yes">✓ SIGNIFICANT · MD 2.40 (p&lt;0.01)</span></div>
+      <div class="vrow"><span class="k">Wrinkle reduction</span><span class="v weak">~ MODEST · MD 0.27 (p=0.04)</span></div>
+      <div class="vrow"><span class="k">Roughness</span><span class="v weak">~ BORDERLINE · MD −8.47 (p=0.05)</span></div>
+      <div class="vrow"><span class="k">Elasticity</span><span class="v no">✗ NOT SIGNIFICANT · MD 0.09 (p=0.15)</span></div>
+    </div>
+
+    <h3>What the science confirms</h3>
+    <p>Hydration and brightness are the most robust results. On wrinkles, the effect is real but modest — and above all, it's <strong>almost entirely driven by oral formulations</strong>: the oral polypeptide subgroup reaches an MD of 1.5 (p=0.01), where topicals struggle. Of the 19 trials, 17 tested oral, only 2 topical. That's the first bias to keep in mind.</p>
+
+    <h3>The trials that hold up</h3>
+    <table class="data">
+      <thead><tr><th>Study</th><th>Peptide</th><th>Key result</th></tr></thead>
+      <tbody>
+        <tr><td>Proksch et al.</td><td>BCP 2.5 g/day oral</td><td class="num">↓ wrinkle volume ~20%, max −49.9%; effect held 4 wks after stopping</td></tr>
+        <tr><td>Kim et al.</td><td>Low-MW collagen oral</td><td class="num">Crow's-feet ↓ significant at 12 wks (p=0.013)</td></tr>
+        <tr><td>Wang et al.</td><td>Argireline topical</td><td class="num">−48.9% vs 0% placebo</td></tr>
+        <tr><td>Taub et al.</td><td>Defensins topical</td><td class="num">84% achieved ≥1-grade improvement vs 50% placebo (p=0.048)</td></tr>
+      </tbody>
+    </table>
+
+    <div class="flag">
+      <span class="fh">What the marketing doesn't tell you</span>
+      Elasticity — the flagship claim of "firming" creams — is <strong>the least proven parameter</strong> (p=0.15, not significant). Between-study heterogeneity is massive (I² ≈ 100%), molecules >500 Da penetrate the skin barrier poorly, and no long-term trial with full histopathology exists yet. The authors themselves call for larger, standardised RCTs.
+    </div>
+
+    <div class="takeaway">
+      <div class="th">Takeaway</div>
+      <ul>
+        <li><strong>Oral</strong> → low-molecular-weight hydrolysed collagen, 2.5–10 g/day, 12 weeks minimum. This is where the evidence is strongest.</li>
+        <li><strong>Topical</strong> → Argireline (acetyl hexapeptide-3) and Matrixyl (palmitoyl pentapeptide) have decent individual data, but less robust than oral.</li>
+        <li><strong>Red flag</strong> → any cream promising measurable elasticity without a cited RCT is selling a claim, not a result.</li>
+      </ul>
+    </div>
+
+    <div class="sources">
+      <span class="sh">Sources</span>
+      Nukaly HY, Halawani IR, et al. "Oral and topical peptides for skin aging: systematic review and meta-analysis of RCTs." <em>Frontiers in Medicine</em>, 17 March 2026. <a href="https://doi.org/10.3389/fmed.2026.1618306">doi.org/10.3389/fmed.2026.1618306</a> · PROSPERO CRD420250652779.
+    </div>
+  </div>
+</article>
+
+<!-- N2 -->
+<article id="n2">
+  <div class="wrap">
+    <div class="ed-head"><span class="ed-no">02</span><span class="ed-tag glp">Metabolic</span></div>
+    <h2 class="title">SURMOUNT-5 settled it. But is that the end of the story?</h2>
+    <p class="subtitle">Semaglutide → Tirzepatide → Retatrutide: the efficacy race.</p>
+
+    <p class="drop">In 2025, the <em>New England Journal of Medicine</em> published the first direct head-to-head trial of tirzepatide versus semaglutide. The result was unambiguous: tirzepatide wins. But behind the headline figure lies a therapeutic hierarchy that's moving fast.</p>
+
+    <h3>Mean weight loss, molecule by molecule</h3>
+    <div class="bars">
+      <div class="bar-row"><div class="name">Semaglutide<br><span>STEP-1 · 68 wks</span></div><div class="bar-track"><div class="bar-fill a" data-w="53"></div></div><div class="pct">−14.9%</div></div>
+      <div class="bar-row"><div class="name">Tirzepatide<br><span>SURMOUNT-1 · 72 wks</span></div><div class="bar-track"><div class="bar-fill b" data-w="79"></div></div><div class="pct">−22.5%</div></div>
+      <div class="bar-row"><div class="name">Retatrutide<br><span>TRIUMPH-1 · 12 mg · 80 wks</span></div><div class="bar-track"><div class="bar-fill c" data-w="100"></div></div><div class="pct">−28.3%</div></div>
+    </div>
+
+    <h3>SURMOUNT-5: the exact data</h3>
+    <p>751 adults with obesity, no diabetes, 72 weeks, maximum tolerated dose in both arms. Tirzepatide wins clearly, with a safety profile comparable — not superior, comparable — to semaglutide's.</p>
+    <table class="data">
+      <thead><tr><th>Metric (72 wks)</th><th>Tirzepatide</th><th>Semaglutide</th></tr></thead>
+      <tbody>
+        <tr><td>Mean weight loss</td><td class="num">−20.2%</td><td class="num">−13.7%</td></tr>
+        <tr><td>≥15% loss</td><td class="num">~65%</td><td class="num">~40%</td></tr>
+        <tr><td>≥25% loss</td><td class="num">~32%</td><td class="num">~16%</td></tr>
+        <tr><td>GI adverse events</td><td class="num" colspan="2">Comparable · mostly during dose escalation · p&lt;0.001 on efficacy</td></tr>
+      </tbody>
+    </table>
+
+    <div class="news">
+      <span class="fh">The new ceiling · May 2026</span>
+      Retatrutide, a triple agonist (GIP + GLP-1 + glucagon), reported its Phase 3 results: <strong>−28.3% at 12 mg over 80 weeks</strong>, and up to −30.3% at 104 weeks in patients with BMI ≥35. 45.3% of participants on 12 mg lost ≥30% of their body weight — territory previously reserved for bariatric surgery.
+    </div>
+
+    <div class="takeaway">
+      <div class="th">Takeaway</div>
+      <ul>
+        <li>Tirzepatide > semaglutide on pure efficacy, confirmed in a direct RCT (NEJM level of evidence).</li>
+        <li>Retatrutide redefines the ceiling in 2026, but remains an investigational drug — not yet approved.</li>
+        <li>These molecules are therapeutic: prescription and medical supervision required. No online shortcuts.</li>
+      </ul>
+    </div>
+
+    <div class="sources">
+      <span class="sh">Sources</span>
+      Aronne LJ, et al. "Tirzepatide as Compared with Semaglutide for the Treatment of Obesity." <em>NEJM</em> 2025, NEJMoa2416394. · Jastreboff AM, et al. SURMOUNT-1, <em>NEJM</em> 2022. · Wilding JPH, et al. STEP-1, <em>NEJM</em> 2021, NEJMoa2032183. · Eli Lilly, TRIUMPH-1 press release, 21 May 2026 (<a href="https://investor.lilly.com/news-releases">investor.lilly.com</a>).
+    </div>
+  </div>
+</article>
+
+<!-- N3 -->
+<article id="n3">
+  <div class="wrap">
+    <div class="ed-head"><span class="ed-no">03</span><span class="ed-tag onc">Oncology</span></div>
+    <h2 class="title">From AMPs to ACPs: an immunotherapy of the future?</h2>
+    <p class="subtitle">Antimicrobial peptides as an anticancer weapon — promising, but still early.</p>
+
+    <p class="drop">Antimicrobial peptides (AMPs) — our natural defence molecules — interest oncology for an elegant reason: they distinguish cancer cells from healthy ones by the charge of their membrane. But let's be clear on the stage: this is essentially preclinical research, with a handful of early trials.</p>
+
+    <h3>Why they target the tumour</h3>
+    <p>Cancer-cell membranes overexpose phosphatidylserine (negatively charged) and show a more electronegative surface potential. Cationic (positively charged) AMPs are drawn to them like a magnet, while healthy cells keep their charged phospholipids on the inner leaflet. Hence a natural selectivity. Documented mechanisms: direct membrane lysis, apoptosis induction, immunomodulation (NK-cell recruitment), and targeting of the tumour microenvironment.</p>
+
+    <div class="flag">
+      <span class="fh">Where the clinic really stands</span>
+      The only programme actually in human trials is <strong>LL-37</strong> (cathelicidin), in Phase I via intratumoral injection for metastatic melanoma (MD Anderson trial, NCT02225366). Everything else — buforins, lactoferricin, melittin coupled to nanoparticles — remains preclinical. The main barrier: very short blood half-life (plasma proteolysis) and haemolytic toxicity at high doses.
+    </div>
+
+    <h3>The most credible lead: AMP + immunotherapy</h3>
+    <p>The AMP + checkpoint inhibitor (anti-PD-1/PD-L1) combination is the most discussed strategy: AMPs lyse tumour cells and release antigens — an "in situ vaccine" — that potentiates the immune response triggered by the checkpoints. Attractive on paper; still to be demonstrated in the clinic.</p>
+
+    <div class="takeaway">
+      <div class="th">Takeaway</div>
+      <ul>
+        <li>Solid, selective mechanism, validated in vitro and in vivo — but only one candidate in human trials.</li>
+        <li>Don't confuse "promising in preclinical" with "available." The gap is 8 to 12 years.</li>
+        <li>The next real milestone would be a move to Phase II, not yet reached for anticancer AMPs.</li>
+      </ul>
+    </div>
+
+    <div class="sources">
+      <span class="sh">Sources</span>
+      ClinicalTrials.gov, trial NCT02225366 ("Induction of Antitumor Response in Melanoma," LL-37 intratumoral, MD Anderson). · Reviews on anticancer peptides (AMP/ACP), 2022–2025 literature. Clinical status verified August 2026: apart from LL-37, preclinical data.
+    </div>
+  </div>
+</article>
+
+<!-- N4 -->
+<article id="n4">
+  <div class="wrap">
+    <div class="ed-head"><span class="ed-no">04</span><span class="ed-tag glp">Safety</span></div>
+    <h2 class="title">What you buy online isn't what you think it is.</h2>
+    <p class="subtitle">The peptide black market — and a July 2026 regulatory U-turn.</p>
+
+    <p class="drop">Since GLP-1s went mainstream, a parallel market of injectable peptides has exploded — driven by fitness influencers, "biohacking," and "looksmaxxing" on TikTok. BPC-157, TB-500, KPV: heavily promoted, almost never tested in humans.</p>
+
+    <h3>What the science actually says on BPC-157 and TB-500</h3>
+    <ul>
+      <li><strong>BPC-157</strong>: derived from a gastric protein, sold for tendon recovery. Promising animal studies, but virtually no quality human RCTs. The US anti-doping agency puts it bluntly: "no one knows if there is a safe dose."</li>
+      <li><strong>TB-500</strong>: promoted for tissue repair. To date, <strong>no human trial</strong> shows it repairs muscle or improves performance in healthy subjects.</li>
+    </ul>
+
+    <div class="flag">
+      <span class="fh">The documented risks</span>
+      "Research use only" products sold online: contaminants, impurities, incorrect dosing, no pharmaceutical quality control. Injection-site reactions, GI disorders, unstudied interactions, and potential oncological risk in patients with a cancer history (peptides that promote cell growth).
+    </div>
+
+    <div class="news">
+      <span class="fh">News · 23–24 July 2026 — worth knowing</span>
+      An <strong>FDA advisory committee voted, narrowly, to loosen restrictions</strong> on seven peptides (BPC-157, TB-500, KPV, MOTS-c, Semax, Epitalon, Emideltide) and allow compounding pharmacies to make them. Crucial point: <strong>the FDA's own scientists had recommended no change</strong>, and several committee members have ties to the peptide industry. The FDA isn't obliged to follow the advice, but often does. In other words: the "illegal to compound" status is shifting — without the safety evidence itself having moved.
+    </div>
+
+    <div class="takeaway">
+      <div class="th">Takeaway</div>
+      <ul>
+        <li>Popularity ≠ evidence. Regulatory loosening doesn't create efficacy data.</li>
+        <li>"Research use only" is a legal label, not a quality guarantee. Often the opposite.</li>
+        <li>No unapproved injectable peptide should be used without medical supervision, whatever a committee votes.</li>
+      </ul>
+    </div>
+
+    <div class="sources">
+      <span class="sh">Sources</span>
+      BBC News, "US health panel loosens restrictions for controversial peptides," 24 July 2026. · Awan O., "FDA's Review Of Peptides Signals A Growing Public Health Challenge," <em>Forbes</em>, 21 July 2026. · FDA Pharmacy Compounding Advisory Committee, July 2026 briefing. · US Anti-Doping Agency (BPC-157 status).
+    </div>
+  </div>
+</article>
+
+<!-- N5 -->
+<article id="n5">
+  <div class="wrap">
+    <div class="ed-head"><span class="ed-no">05</span><span class="ed-tag cos">Research</span></div>
+    <h2 class="title">Triple agonists, gut-brain axis, neuro peptides.</h2>
+    <p class="subtitle">Where research is actually heading — and what's still just a promise.</p>
+
+    <p class="drop">If tirzepatide was the story of 2023 and retatrutide of 2026, the next frontier is already taking shape. Three directions stand out, at very different levels of maturity.</p>
+
+    <h3>1. Multi-agonists are scaling up</h3>
+    <p>The move from mono- (semaglutide) to dual (tirzepatide) to triple agonist (retatrutide) isn't incremental: each added receptor opens a metabolic lever. Retatrutide, reaching −28 to −30%, approaches surgical results. The open question: how far can you stack targets without multiplying adverse effects?</p>
+
+    <h3>2. From weekly injection to daily pill</h3>
+    <p>The real usage revolution may be oral. GLP-1 pills (like orforglipron) aim to preserve weight loss without injection — 2026 maintenance data suggest 75–79% preservation vs 38–49% on placebo. A major adherence shift if confirmed and approved.</p>
+
+    <h3>3. Gut-brain axis and neurological peptides</h3>
+    <p>GLP-1s also act on the brain (satiety, reward), which explains trials underway beyond weight: sleep apnea (already approved for tirzepatide), knee osteoarthritis, fatty liver, and neuro/addiction leads. This is the most speculative field — many hypotheses, few completed Phase 3 trials outside metabolism.</p>
+
+    <div class="takeaway">
+      <div class="th">Takeaway</div>
+      <ul>
+        <li>Multi-agonists: the most solid trajectory, backed by real Phase 3 trials.</li>
+        <li>Oral: the true adoption game-changer, if maintenance data hold.</li>
+        <li>Neuro / addiction: exciting, but still largely at the hypothesis stage.</li>
+      </ul>
+    </div>
+
+    <div class="sources">
+      <span class="sh">Sources</span>
+      TRIUMPH programme (retatrutide), Eli Lilly 2026. · Oral GLP-1 maintenance data (orforglipron), 2026. · SURMOUNT-OSA, <em>NEJM</em> 2024 (sleep apnea). Neuro leads flagged as preliminary.
+    </div>
+  </div>
+</article>
+
+<!-- N6 -->
+<article id="n6">
+  <div class="wrap">
+    <div class="ed-head"><span class="ed-no">06</span><span class="ed-tag onc">Synthesis</span></div>
+    <h2 class="title">Approved, unapproved, cosmetic: the table that decides.</h2>
+    <p class="subtitle">The series recapped into one decision grid.</p>
+
+    <p class="drop">After five issues, one question matters: what can you rely on, and what should you be wary of? Here's the synthesis, sorted by level of evidence.</p>
+
+    <table class="data">
+      <thead><tr><th>Category</th><th>Examples</th><th>Level of evidence</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Therapeutic GLP-1s</td><td>Semaglutide, tirzepatide</td><td class="num yes">Phase 3 RCT, NEJM</td><td>FDA/EMA approved</td></tr>
+        <tr><td>Triple agonist</td><td>Retatrutide</td><td class="num weak">Positive Phase 3</td><td>Approval pending</td></tr>
+        <tr><td>Oral cosmetic peptides</td><td>Low-MW hydrolysed collagen</td><td class="num weak">Meta-analysis, modest effect</td><td>Over the counter</td></tr>
+        <tr><td>Topical cosmetic peptides</td><td>Argireline, Matrixyl</td><td class="num weak">Individual trials</td><td>Over the counter</td></tr>
+        <tr><td>Anticancer peptides</td><td>LL-37, buforins</td><td class="num no">Preclinical / Phase I</td><td>Research</td></tr>
+        <tr><td>"Wellness" peptides</td><td>BPC-157, TB-500, KPV</td><td class="num no">No human evidence</td><td>Unapproved · grey market</td></tr>
+      </tbody>
+    </table>
+
+    <div class="takeaway">
+      <div class="th">The rule in one sentence</div>
+      <p style="margin:0">The more aggressively a peptide is promoted online, the less human evidence it tends to have. The best-supported molecules (GLP-1, oral collagen) are also the most boring to sell: they demand time, a prescription, or realistic expectations.</p>
+    </div>
+
+    <div class="sources">
+      <span class="sh">Sources</span>
+      Synthesis of issues 01–05. Primary references cited in each issue: Frontiers in Medicine 2026, NEJM 2021–2025, Eli Lilly TRIUMPH-1 2026, ClinicalTrials.gov, FDA/BBC/Forbes July 2026.
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="wrap">
+    <p class="disclaimer">
+      Disclaimer: content for scientific information only, not constituting medical advice. GLP-1 data (SURMOUNT-5, SURMOUNT-1, STEP-1, TRIUMPH-1) and cosmetic data (Frontiers in Medicine meta-analysis, 17 March 2026) are verified against their primary publications. Oncology and regulatory trial statuses are verified as of August 2026 and may change. Consult a healthcare professional before any therapeutic decision. Peptides not approved by health authorities should not be used outside medical supervision.
+    </p>
+    <p class="foot-brand">PEPTIDES DECODED · © 2026 · Written with Dia</p>
+  </div>
+</footer>
+
+<script>
+  var bars = document.querySelectorAll('.bar-fill');
+  var io = new IntersectionObserver(function(entries){ entries.forEach(function(en){ if(en.isIntersecting){ en.target.style.width = en.target.getAttribute('data-w') + '%'; } }); }, { threshold: .4 });
+  bars.forEach(function(b){ io.observe(b); });
+</script>
+</body>
+</html>

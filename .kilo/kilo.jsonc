@@ -1,0 +1,6 @@
+{
+  "$schema": "https://app.kilo.ai/config.json",
+  "indexing": {
+    "model": "perplexity/pplx-embed-v1-0.6b"
+  }
+}

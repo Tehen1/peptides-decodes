@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Affiliate policy and transparency · Peptides Decoded</title>
+<style>
+  :root {
+    --ink: #14140f; --paper: #f4f0e6; --paper-2: #ece6d6;
+    --accent: #d7442f; --accent-2: #1f5c4d; --gold: #c98a1e;
+    --line: #14140f; --muted: #5c5749;
+    --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+    --mono: "SFMono-Regular", "SF Mono", Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--serif); line-height: 1.62; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 28px; }
+  header.masthead { border-bottom: 3px solid var(--line); padding: 16px 0 12px; }
+  .masthead-inner { max-width: 780px; margin: 0 auto; padding: 0 28px; display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 6px; }
+  .logo { font-size: clamp(22px, 4vw, 30px); font-weight: 800; letter-spacing: -.02em; }
+  .logo em { font-style: italic; color: var(--accent); }
+  .masthead-meta { font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em; color: var(--muted); text-transform: uppercase; }
+  .masthead-meta a { color: var(--accent); text-decoration: none; }
+  .intro { padding: 46px 0 30px; border-bottom: 1.5px solid var(--line); }
+  .intro h1 { font-size: clamp(30px, 6vw, 50px); line-height: 1; letter-spacing: -.03em; }
+  .intro p { margin-top: 18px; font-size: 18px; max-width: 60ch; color: #2c2a22; }
+  section { padding: 44px 0; border-bottom: 1.5px solid var(--line); }
+  h2 { font-size: clamp(23px, 4vw, 34px); letter-spacing: -.02em; line-height: 1.05; }
+  p { font-size: 17px; margin: 12px 0; max-width: 64ch; }
+  ul { margin: 12px 0 12px 22px; font-size: 17px; } li { margin: 7px 0; }
+  table.data { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 15px; }
+  table.data th, table.data td { border: 1px solid rgba(20,20,15,.3); padding: 9px 11px; text-align: left; vertical-align: top; }
+  table.data th { background: var(--paper-2); font-family: var(--mono); font-size: 11px; letter-spacing: .05em; text-transform: uppercase; }
+  .yes { color: var(--accent-2); font-weight: 700; } .warn { color: var(--gold); font-weight: 700; } .no { color: var(--accent); font-weight: 700; }
+  .mono-note { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+  footer { border-top: 3px solid var(--line); padding: 30px 0 90px; }
+  .disclaimer { font-family: var(--mono); font-size: 11px; color: var(--muted); line-height: 1.7; max-width: 74ch; }
+  a { color: var(--accent-2); }
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="logo">Peptides <em>Decoded</em></div>
+    <div class="masthead-meta">Affiliate &amp; transparency · <a href="en.html">Home</a> · <a href="affiliation.html">FR</a></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="intro">
+    <h1>How we make money — and what we refuse to sell.</h1>
+    <p>Yes, we recommend products and some links are affiliate links. We own it plainly: when a peptide has real evidence and is legal over the counter, we tell you where to buy it (RC Peptides) and we earn a commission. When it doesn't, we tell you to avoid it — even when that would pay more. Here's the rule, no spin.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>The rule: we only relay what we'd recommend without a commission.</h2>
+    <p>An affiliate link means a purchase made through it may pay us a commission, at no extra cost to you. It changes neither our analysis nor our verdicts. A product only appears as a link if it meets three cumulative conditions:</p>
+    <ul>
+      <li>It has <strong>real human evidence</strong> (a cited RCT or meta-analysis).</li>
+      <li>It is <strong>legal to sell over the counter</strong> in the EU.</li>
+      <li>It is <strong>consistent with what our issues conclude</strong>.</li>
+    </ul>
+    <p>If a product fails any of the three, it gets no link — whatever the commission on offer.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>RC Peptides partnership — currently the only active affiliate partner</h2>
+    <p>Our only active affiliate partnership is with <strong>RC Peptides</strong>. It covers 183 products from their catalogue, bounded by our editorial criteria. This section explains exactly what is covered, how tracking works, and what remains excluded.</p>
+
+    <h3>What is included</h3>
+    <ul>
+      <li>Topical cosmetic peptides: Argirelin, Matrixyl, GHK-Cu.</li>
+      <li>Bioregulators / cosmetic or wellness supplements when supported by human data or tolerated OTC.</li>
+      <li>Compatible logistics accessories presented with honest lab context.</li>
+    </ul>
+
+    <h3>How tracking works</h3>
+    <ul>
+      <li>Clicks are tracked through a Cloudflare Pages Function.</li>
+      <li>Only anonymised data is stored: slug, newsletter ID, hashed IP, user agent, referrer.</li>
+      <li>No raw IP address is stored.</li>
+      <li>Data is logged in Supabase for analytics.</li>
+      <li>Each product link includes <code>?ref=PEPTIDESDECODED</code>.</li>
+    </ul>
+
+    <h3>What is excluded</h3>
+    <ul>
+      <li>No unapproved injectable peptides are relayed through this partnership.</li>
+      <li>No product without human evidence is linked.</li>
+      <li>No claim is made beyond what the cited evidence supports.</li>
+    </ul>
+
+    <p class="mono-note">Transparency: some links in our issues are affiliate links to RC Peptides. If you purchase through them, we may earn a commission at no extra cost to you. We only link products we would recommend regardless of commission.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Peptides analysed one by one: recommended or ruled out.</h2>
+    <p>People often ask us which peptides are "worth it." Here's our ranking, based on evidence, not commissions.</p>
+    <table class="data">
+      <thead><tr><th>Peptide</th><th>Human evidence</th><th>Status</th><th>Affiliate link?</th></tr></thead>
+      <tbody>
+        <tr><td>Oral hydrolysed collagen</td><td>2026 meta-analysis (hydration, brightness)</td><td class="warn">Editorial / topical only</td><td class="no">No active iHerb partnership</td></tr>
+        <tr><td>Argireline (topical)</td><td>Wang et al.: −48.9% wrinkles vs 0% placebo</td><td class="yes">Recommended</td><td class="yes">Yes — RC Peptides</td></tr>
+        <tr><td>Matrixyl (topical)</td><td>Palmitoyl pentapeptide, wrinkle trials</td><td class="yes">Recommended</td><td class="yes">Yes — RC Peptides</td></tr>
+        <tr><td>GHK-Cu (copper, topical)</td><td>Decent cosmetic data</td><td class="warn">Topical only</td><td class="warn">Yes — RC Peptides</td></tr>
+        <tr><td>GLP-1 (sema / tirzepatide)</td><td>Phase 3 RCT, NEJM</td><td class="warn">Prescription</td><td class="no">No (drug)</td></tr>
+        <tr><td>Thymosin α1</td><td>Real clinical dossier (adjuvant)</td><td class="warn">Drug</td><td class="no">No (prescription)</td></tr>
+        <tr><td>CJC-1295</td><td>2006 human RCT — but PK only (↑ GH/IGF-1), no proven health benefit</td><td class="warn">Partial evidence</td><td class="no">No (unapproved injectable)</td></tr>
+        <tr><td>BPC-157</td><td>Animal only · 0 human RCT</td><td class="no">Ruled out</td><td class="no">Never</td></tr>
+        <tr><td>TB-500</td><td>No convincing human trial</td><td class="no">Ruled out</td><td class="no">Never</td></tr>
+        <tr><td>Ipamorelin</td><td>Pharmacology only · efficacy unproven</td><td class="no">Ruled out</td><td class="no">Never</td></tr>
+        <tr><td>AOD-9604</td><td>Failed anti-obesity trial</td><td class="no">Ruled out</td><td class="no">Never</td></tr>
+        <tr><td>Semax / Selank</td><td>Small, non-replicated studies</td><td class="no">Ruled out</td><td class="no">Never</td></tr>
+      </tbody>
+    </table>
+    <p class="mono-note">Three tiers: <strong>recommended</strong> (evidence + legal + link), <strong>partial evidence</strong> (limited human data — we discuss it but no purchase link), <strong>ruled out</strong> (no data or danger). Among "wellness" injectables, none reaches "recommended": the best-placed one (CJC-1295) stays in partial evidence, no link.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What we will never do.</h2>
+    <ul>
+      <li>Relay an unapproved injectable peptide (BPC-157, TB-500, CJC-1295…), whatever the commission.</li>
+      <li>Invent or misappropriate a figure to fake evidence.</li>
+      <li>Present an affiliate link without clearly disclosing it.</li>
+      <li>Give disguised medical advice. For any therapeutic molecule: medical consultation.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="disclaimer">
+      GDPR: any tracking links are anonymised (no raw IP address stored). You can unsubscribe in one click. Content for scientific information only, not medical advice. Peptides not approved by health authorities should not be used outside medical supervision. Publisher: AIFTW, Liège, Belgium.
+    </p>
+    <p class="mono-note" style="margin-top:14px">PEPTIDES DECODED · © 2026 · Written with Dia</p>
+  </div>
+</footer>
+</body>
+</html>
