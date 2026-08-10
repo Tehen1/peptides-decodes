@@ -184,10 +184,14 @@ export function createClickHandler(options: ClickHandlerOptions) {
       try {
         product = await getProduct(env, rawSlug);
       } catch (err) {
+        const msg = err instanceof Error ? err.message : String(err);
         console.error("Supabase lookup error:", err);
         return new Response("Service unavailable", {
           status: 503,
-          headers: CORS_HEADERS,
+          headers: {
+            ...CORS_HEADERS,
+            "X-Debug-Error": msg,
+          },
         });
       }
 
