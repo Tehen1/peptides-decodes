@@ -49,6 +49,8 @@ const CORS_HEADERS = Object.freeze({
   "Access-Control-Max-Age": "86400",
 }) as const;
 
+export { CORS_HEADERS };
+
 const DISCLOSURE_HEADER = Object.freeze({
   "X-Disclosure": "affiliate-link",
 }) as const;

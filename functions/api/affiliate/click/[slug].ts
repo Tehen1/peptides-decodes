@@ -7,7 +7,7 @@
 // Uses shared canonical click-tracker
 // =====================================================
 
-import { createClickHandler, type Env, CORS_HEADERS } from "../../../../_shared/click-tracker";
+import { createClickHandler, type Env } from "../../../../_shared/click-tracker";
 
 export type { Env };
 
@@ -20,8 +20,4 @@ export async function onRequestGet(context: { request: Request; env: Env; params
   });
 
   return handler.fetch(request, env, {} as any);
-}
-
-export async function onRequestOptions() {
-  return new Response(null, { status: 204, headers: CORS_HEADERS });
 }
