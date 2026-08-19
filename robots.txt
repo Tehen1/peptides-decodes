@@ -1,0 +1,16 @@
+# robots.txt for Peptides Decoded
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://peptides-decodes.pages.dev/sitemap.xml
+
+# Disallow admin/private areas (none currently, but good practice)
+Disallow: /api/
+Disallow: /_redirects
+Disallow: /.git/
+Disallow: /.backup_*
+Disallow: /node_modules/
+
+# Crawl delay (polite)
+Crawl-delay: 10

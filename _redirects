@@ -1,4 +1,14 @@
+# Cloudflare Pages redirects
+# Clean URLs with trailing slashes are the canonical versions
+# These handle any legacy links without trailing slashes
 
-# Canonical paths
-/articles /articles/index.html 301
-/articles-en /articles/en.html 301
+/articles/peptides-cosmetiques /articles/peptides-cosmetiques/ 301
+/articles/glp1-perte-de-poids /articles/glp1-perte-de-poids/ 301
+/articles/glp1-cancer /articles/glp1-cancer/ 301
+/articles/glp1-neurologie /articles/glp1-neurologie/ 301
+
+# Legacy .html extensions (if any old links exist)
+/articles/peptides-cosmetiques.html /articles/peptides-cosmetiques/ 301
+/articles/glp1-perte-de-poids.html /articles/glp1-perte-de-poids/ 301
+/articles/glp1-cancer.html /articles/glp1-cancer/ 301
+/articles/glp1-neurologie.html /articles/glp1-neurologie/ 301

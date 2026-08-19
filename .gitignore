@@ -1,2 +1,56 @@
+# Peptides Decoded — .gitignore
+
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+firebase-debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local backups
+.backup_*/
+*.backup
+*.bak
+
+# Environment & secrets
 .env
-.env
+.env.local
+.env.*.local
+*.pem
+*.key
+service-account*.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Node
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+
+# Cloudflare
+wrangler.toml
+# Keep wrangler.toml.example if you have one
+
+# OS
+.DS_Store
+ehthumbs.db
+Desktop.ini
+
+# Testing
+coverage/
+.nyc_output/
+
+# Misc
+*.tgz
+.cache/

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://peptides-decodes.pages.dev/</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://peptides-decodes.pages.dev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://peptides-decodes.pages.dev/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://peptides-decodes.pages.dev/"/>
+  </url>
+  <url>
+    <loc>https://peptides-decodes.pages.dev/articles/peptides-cosmetiques/</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://peptides-decodes.pages.dev/articles/peptides-cosmetiques/"/>
+  </url>
+  <url>
+    <loc>https://peptides-decodes.pages.dev/articles/glp1-perte-de-poids/</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://peptides-decodes.pages.dev/articles/glp1-perte-de-poids/"/>
+  </url>
+  <url>
+    <loc>https://peptides-decodes.pages.dev/articles/glp1-cancer/</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://peptides-decodes.pages.dev/articles/glp1-cancer/"/>
+  </url>
+  <url>
+    <loc>https://peptides-decodes.pages.dev/articles/glp1-neurologie/</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://peptides-decodes.pages.dev/articles/glp1-neurologie/"/>
+  </url>
+  <url>
+    <loc>https://peptides-decodes.pages.dev/editorial-policy/</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://peptides-decodes.pages.dev/privacy/</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://peptides-decodes.pages.dev/terms/</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
