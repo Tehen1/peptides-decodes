@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Safety reporting et pharmacovigilance pour essais cliniques de peptides (FDA/EMA) — Peptides Decoded</title>
+  <meta name="description" content="Les obligations de safety reporting pour les essais de peptides suivent les règles générales IND/CTA, avec guidances FDA 2025 sur responsabilités sponsors/investigateurs, analyses agrégées et réduction rapports non pertinents.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://peptides-decodes.pages.dev/articles/pharmacovigilance/fda-ema-safety-reporting/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://peptides-decodes.pages.dev/articles/pharmacovigilance/fda-ema-safety-reporting/">
+  <meta property="og:title" content="Safety reporting et pharmacovigilance pour essais de peptides (FDA/EMA)">
+  <meta property="og:description" content="Guidances FDA 2025, responsabilités sponsors/investigateurs, analyses agrégées, portails électroniques. Cadre général applicable aux peptides.">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Safety reporting essais peptides (FDA/EMA)">
+  <meta name="twitter:description" content="Guidances FDA 2025, 21 CFR 312.32(c), analyses agrégées, réduction rapports IND non utiles.">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Safety reporting et pharmacovigilance pour les essais cliniques de médicaments peptidiques",
+    "description": "Cadre réglementaire FDA/EMA pour safety reporting IND/CTA, guidances 2025, recommandations CTTI.",
+    "author": { "@type": "Organization", "name": "Peptides Decoded" },
+    "datePublished": "2026-08-19",
+    "dateModified": "2026-08-19"
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0f172a; --fg: #f8fafc; --muted: #94a3b8;
+      --accent: #38bdf8; --card-bg: #1e293b; --border: #334155;
+      --success: #22c55e; --warning: #f59e0b; --danger: #ef4444;
+      --radius: 12px; --shadow: 0 10px 30px rgba(0,0,0,0.4);
+      --font-sans: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-sans); background: linear-gradient(135deg, var(--bg), #020617 60%); color: var(--fg); line-height: 1.6; min-height: 100vh; }
+    .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; gap: 1rem; flex-wrap: wrap; }
+    .logo { font-size: 1.5rem; font-weight: 800; background: linear-gradient(90deg, var(--accent), #22d3ee); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-decoration: none; color: var(--accent); }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+    nav a:hover, nav a:focus { color: var(--fg); outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
+    .breadcrumb { font-size: 0.875rem; color: var(--muted); margin-bottom: 1.5rem; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    .article-header { margin-bottom: 2rem; }
+    .evidence-badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .evidence-moderate { background: rgba(245, 158, 11, 0.15); color: var(--warning); border: 1px solid var(--warning); }
+    article { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; box-shadow: var(--shadow); margin: 2rem 0; }
+    h1 { font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 800; margin-bottom: 1rem; line-height: 1.2; }
+    h2 { font-size: 1.5rem; font-weight: 700; margin: 2rem 0 1rem; color: var(--fg); }
+    h3 { font-size: 1.25rem; font-weight: 700; margin: 1.5rem 0 0.75rem; color: var(--fg); }
+    p { color: var(--muted); margin-bottom: 1rem; }
+    ul { margin-left: 1.5rem; margin-bottom: 1rem; color: var(--muted); }
+    li { margin-bottom: 0.5rem; }
+    .meta { font-size: 0.875rem; color: var(--muted); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+    .disclaimer { background: rgba(239, 68, 68, 0.1); border: 1px solid var(--danger); border-radius: var(--radius); padding: 1.5rem; margin: 2rem 0; }
+    .disclaimer h3 { color: var(--danger); margin-bottom: 0.75rem; }
+    .disclaimer p { font-size: 0.9rem; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    th, td { padding: 0.75rem; border: 1px solid var(--border); text-align: left; }
+    th { background: var(--card-bg); color: var(--fg); }
+    footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.875rem; }
+    footer a { color: var(--accent); text-decoration: none; }
+    @media (max-width: 640px) { .container { padding: 1.5rem 1rem; } article { padding: 1.5rem; } table { font-size: 0.8rem; } }
+    @media print { body { background: white; color: black; } header, footer, .breadcrumb { display: none; } article { border: 1px solid #ccc; box-shadow: none; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header role="banner">
+      <a href="/" class="logo" aria-label="Peptides Decoded — Accueil">Peptides Decoded</a>
+      <nav role="navigation" aria-label="Navigation principale">
+        <ul>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/#articles">Articles</a></li>
+          <li><a href="/#methodology">Méthodologie</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a> → <a href="/#articles">Articles</a> → <a href="/articles/pharmacovigilance/">Pharmacovigilance</a> → <span aria-current="page">FDA/EMA Safety Reporting</span>
+    </nav>
+
+    <main role="main">
+      <article aria-labelledby="article-title">
+        <div class="article-header">
+          <span class="evidence-badge evidence-moderate">Guidances réglementaires · Intermédiaire</span>
+          <h1 id="article-title">Safety reporting et pharmacovigilance pour les essais cliniques de médicaments peptidiques (IND/CTA)</h1>
+          <p class="meta">Publié le 19 août 2026 · Dernière vérification : 19 août 2026</p>
+        </div>
+
+        <h2>Verdict</h2>
+        <p>Les obligations de safety reporting pour les essais de peptides suivent les mêmes règles que pour les autres médicaments expérimentaux, via les guidances FDA révisées en 2025 et les exigences EMA/IRB, avec une insistance croissante sur l'analyse agrégée des données et la réduction des rapports non pertinents.</p>
+
+        <h2>Type et niveau de preuve</h2>
+        <table>
+          <thead>
+            <tr><th>Élément</th><th>Évaluation</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Type de documents</td><td>Guidances FDA finales (décembre 2025), réglementations 21 CFR 312, recommandations CTTI</td></tr>
+            <tr><td>Portée</td><td>Sponsors, investigateurs, IRB/CEC – essais IND, BA/BE, IDE</td></tr>
+            <tr><td>Niveau de preuve</td><td>Réglementaire / méthodologique (cadre légal, non données cliniques)</td></tr>
+            <tr><td>Spécificité peptides</td><td>Cadre général applicable ; pas de dispositions spécifiques peptides dans ces guidances</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Contenu vérifié (points clés)</h2>
+
+        <h3>Responsabilités des sponsors (21 CFR 312.32(c), guidance FDA déc. 2025)</h3>
+        <ul>
+          <li>Soumission IND Safety Report à la FDA et investigateurs ≤15 jours pour événements répondant aux critères : sérieux ET inattendu</li>
+          <li>Analyses agrégées des données de sécurité requises si nécessaire pour l'évaluation</li>
+          <li>Fusion et clarification des guidances 2012 et 2015, ajout flexibilité analyses agrégées et unblinding dans certains cas</li>
+        </ul>
+
+        <h3>Responsabilités des investigateurs (21 CFR 312.64(b), 312.66, guidance FDA)</h3>
+        <ul>
+          <li>Rapport immédiat de tous événements graves au sponsor (suspectés liés ou non)</li>
+          <li>Problèmes inattendus présentant un risque → IRB/CEC</li>
+          <li>Guidance clarifiant obligations et processus de communication</li>
+        </ul>
+
+        <h3>Études BA/BE (modifications d'AMM existantes)</h3>
+        <ul>
+          <li>SAE soumis au FAERS ou via HHS Safety Reporting Portal</li>
+        </ul>
+
+        <h3>Recommandations CTTI (Clinical Trials Transformation Initiative)</h3>
+        <ul>
+          <li>Usage portails électroniques pour soumission rapports</li>
+          <li>Agrégation données de sécurité pour détection signaux</li>
+          <li>Réduction rapports IND non utiles (non sérieux, attendus)</li>
+        </ul>
+
+        <h3>Délais réglementaires clés</h3>
+        <ul>
+          <li>7 jours : cas fatals ou menaçant le pronostic vital (FDA)</li>
+          <li>15 jours : autres SAE sérieux et inattendus (FDA)</li>
+          <li>Follow‑up safety reports requis</li>
+        </ul>
+
+        <h2>Sécurité (cadre)</h2>
+        <ul>
+          <li>Remontée rapide SAE inattendus imposée indépendamment de la classe médicament (incl. peptides)</li>
+          <li>IRB/CEC doivent disposer procédures écrites gestion rapports et communication autorités/responsables institutionnels</li>
+        </ul>
+
+        <h2>Limites</h2>
+        <ul>
+          <li>Guidances générales : ne détaillent pas particularités spécifiques peptides (immunogénicité, métabolites peptidiques, agrégats) – jugement scientifique complémentaire requis</li>
+          <li>Mise en œuvre (agrégation, unblinding) dépend capacités sponsors et systèmes d'information</li>
+          <li>Études académiques petites tailles peuvent avoir difficultés appliquer pleinement ces recommandations</li>
+          <li>Cadre EMA/CEC similaire mais non détaillé ici – se reporter aux lignes directrices EMA sur safety reporting (GVP Module VI, lignes directrices CT-3)</li>
+        </ul>
+
+        <h2>Sources primaires</h2>
+        <ul>
+          <li>FDA Guidance – « Sponsor Responsibilities — Safety Reporting Requirements and Safety Assessment for IND and Bioavailability/Bioequivalence Studies » (résumé) : <a href="https://www.wcgclinical.com/insights/fda-ind-safety-reporting-guidance/" target="_blank" rel="noopener">https://www.wcgclinical.com/insights/fda-ind-safety-reporting-guidance/</a></li>
+          <li>FDA Guidance – « Investigator Responsibilities — Safety Reporting for Investigational Drugs and Devices » : <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/investigator-responsibilities-safety-reporting-investigational-drugs-and-devices" target="_blank" rel="noopener">https://www.fda.gov/regulatory-information/search-fda-guidance-documents/investigator-responsibilities-safety-reporting-investigational-drugs-and-devices</a></li>
+          <li>VCU – Rappel réglementaire déclaration événements indésirables FDA : <a href="https://research.vcu.edu/integrity-and-compliance/regulatory-affairs/reporting-adverse-events-to-fda/" target="_blank" rel="noopener">https://research.vcu.edu/integrity-and-compliance/regulatory-affairs/reporting-adverse-events-to-fda/</a></li>
+          <li>CTTI – Safety Reporting recommendations : <a href="https://ctti-clinicaltrials.org/about/ctti-projects/safety-reporting/" target="_blank" rel="noopener">https://ctti-clinicaltrials.org/about/ctti-projects/safety-reporting/</a></li>
+          <li>Article synthèse nouvelle guidance sponsor : <a href="https://www.hlc.com/en/publications/new-fda-guidance-lays-out-clinical-trial-sponsor-safety-reporting-requirements" target="_blank" rel="noopener">https://www.hlc.com/en/publications/new-fda-guidance-lays-out-clinical-trial-sponsor-safety-reporting-requirements</a></li>
+        </ul>
+      </article>
+
+      <div class="disclaimer">
+        <h3>⚠️ Avertissement</h3>
+        <p>Cet article est informatif uniquement. Il ne constitue pas un avis réglementaire ou juridique. Pour toute obligation de safety reporting, consultez les textes officiels (21 CFR 312, GVP EMA) et un expert en pharmacovigilance / affaires réglementaires.</p>
+      </div>
+    </main>
+
+    <footer role="contentinfo">
+      <p>Peptides Decoded © 2026 · <a href="/editorial-policy/">Politique éditoriale</a> · <a href="/privacy/">Confidentialité</a></p>
+    </footer>
+  </div>
+</body>
+</html>
