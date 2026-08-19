@@ -1,4 +1,35 @@
+# Cloudflare Pages redirects
+# Clean URLs with trailing slashes are the canonical versions
+# These handle any legacy links without trailing slashes
 
-# Canonical paths
-/articles /articles/index.html 301
-/articles-en /articles/en.html 301
+/articles/peptides-cosmetiques /articles/peptides-cosmetiques/ 301
+/articles/glp1-perte-de-poids /articles/glp1-perte-de-poids/ 301
+/articles/glp1-cancer /articles/glp1-cancer/ 301
+/articles/glp1-neurologie /articles/glp1-neurologie/ 301
+
+# Legacy .html extensions (if any old links exist)
+/articles/peptides-cosmetiques.html /articles/peptides-cosmetiques/ 301
+/articles/glp1-perte-de-poids.html /articles/glp1-perte-de-poids/ 301
+/articles/glp1-cancer.html /articles/glp1-cancer/ 301
+/articles/glp1-neurologie.html /articles/glp1-neurologie/ 301
+
+# New articles - trailing slash redirects
+/articles/peptides-cosmetiques/palmitoyl-pentapeptide-4 /articles/peptides-cosmetiques/palmitoyl-pentapeptide-4/ 301
+/articles/peptides-cosmetiques/acetyl-hexapeptide-8 /articles/peptides-cosmetiques/acetyl-hexapeptide-8/ 301
+/articles/peptides-cosmetiques/microneedle-clha-ahp8-egf /articles/peptides-cosmetiques/microneedle-clha-ahp8-egf/ 301
+/articles/glp1-glucagon/survodutide /articles/glp1-glucagon/survodutide/ 301
+/articles/glp1-gip/gasolin /articles/glp1-gip/gasolin/ 301
+/articles/reglementation/ema-synthetic-peptides-2026 /articles/reglementation/ema-synthetic-peptides-2026/ 301
+/articles/reglementation/statut-retractations-argireline-survodutide /articles/reglementation/statut-retractations-argireline-survodutide/ 301
+/articles/pharmacovigilance/fda-ema-safety-reporting /articles/pharmacovigilance/fda-ema-safety-reporting/ 301
+
+# Category index pages
+/articles/glp1-glucagon /articles/glp1-glucagon/ 301
+/articles/glp1-gip /articles/glp1-gip/ 301
+/articles/reglementation /articles/reglementation/ 301
+/articles/pharmacovigilance /articles/pharmacovigilance/ 301
+
+# Policy pages
+/editorial-policy /editorial-policy/ 301
+/privacy /privacy/ 301
+/terms /terms/ 301

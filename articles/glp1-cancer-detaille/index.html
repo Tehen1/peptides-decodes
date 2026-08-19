@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>GLP‑1 et risque de cancer — Données détaillées (cohortes, méta-analyses, target-trial) — Peptides Decoded</title>
+  <meta name="description" content="Cohorte 1,6M patients : incidence 13,6 vs 16,4/1000 personnes-années (HR 0,83). Réduction endomètre, ovaire, méningiomes. Signal rein (HR 1,38, IC 0,99–1,93). Target-trial emulation ASCO 2025.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://peptides-decodes.pages.dev/articles/glp1-cancer-detaille/">
+
+  <style>
+    :root {
+      --bg: #0f172a; --fg: #f8fafc; --muted: #94a3b8;
+      --accent: #38bdf8; --card-bg: #1e293b; --border: #334155;
+      --success: #22c55e; --warning: #f59e0b; --danger: #ef4444;
+      --radius: 12px; --shadow: 0 10px 30px rgba(0,0,0,0.4);
+      --font-sans: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-sans); background: linear-gradient(135deg, var(--bg), #020617 60%); color: var(--fg); line-height: 1.6; min-height: 100vh; }
+    .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; gap: 1rem; flex-wrap: wrap; }
+    .logo { font-size: 1.5rem; font-weight: 800; background: linear-gradient(90deg, var(--accent), #22d3ee); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-decoration: none; color: var(--accent); }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+    nav a:hover, nav a:focus { color: var(--fg); outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
+    .breadcrumb { font-size: 0.875rem; color: var(--muted); margin-bottom: 1.5rem; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    .article-header { margin-bottom: 2rem; }
+    .evidence-badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .evidence-moderate { background: rgba(245, 158, 11, 0.15); color: var(--warning); border: 1px solid var(--warning); }
+    article { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; box-shadow: var(--shadow); margin: 2rem 0; }
+    h1 { font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 800; margin-bottom: 1rem; line-height: 1.2; }
+    h2 { font-size: 1.5rem; font-weight: 700; margin: 2rem 0 1rem; color: var(--fg); }
+    h3 { font-size: 1.25rem; font-weight: 700; margin: 1.5rem 0 0.75rem; color: var(--fg); }
+    p { color: var(--muted); margin-bottom: 1rem; }
+    ul { margin-left: 1.5rem; margin-bottom: 1rem; color: var(--muted); }
+    li { margin-bottom: 0.5rem; }
+    .meta { font-size: 0.875rem; color: var(--muted); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+    .disclaimer { background: rgba(239, 68, 68, 0.1); border: 1px solid var(--danger); border-radius: var(--radius); padding: 1.5rem; margin: 2rem 0; }
+    .disclaimer h3 { color: var(--danger); margin-bottom: 0.75rem; }
+    .disclaimer p { font-size: 0.9rem; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    th, td { padding: 0.75rem; border: 1px solid var(--border); text-align: left; }
+    th { background: var(--card-bg); color: var(--fg); }
+    footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.875rem; }
+    footer a { color: var(--accent); text-decoration: none; }
+    @media (max-width: 640px) { .container { padding: 1.5rem 1rem; } article { padding: 1.5rem; } table { font-size: 0.8rem; } }
+    @media print { body { background: white; color: black; } header, footer, .breadcrumb { display: none; } article { border: 1px solid #ccc; box-shadow: none; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header role="banner">
+      <a href="/" class="logo" aria-label="Peptides Decoded — Accueil">Peptides Decoded</a>
+      <nav role="navigation" aria-label="Navigation principale">
+        <ul>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/#articles">Articles</a></li>
+          <li><a href="/#methodology">Méthodologie</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a> → <a href="/#articles">Articles</a> → <a href="/articles/glp1-cancer/">GLP-1 Cancer</a> → <span aria-current="page">Données détaillées</span>
+    </nav>
+
+    <main role="main">
+      <article aria-labelledby="article-title">
+        <div class="article-header">
+          <span class="evidence-badge evidence-moderate">Cohortes · Méta-analyses · Target-trial · Intermédiaire</span>
+          <h1 id="article-title">Agonistes GLP‑1 et incidence de cancers liés à l'obésité — Données détaillées</h1>
+          <p class="meta">Publié le 19 août 2026 · Dernière vérification : 19 août 2026</p>
+        </div>
+
+        <h2>Verdict</h2>
+        <p>Les grandes études observationnelles suggèrent une réduction globale du risque de certains cancers liés à l'obésité sous GLP‑1 RA, avec un possible signal de risque augmenté pour le cancer du rein, mais ces résultats restent exploratoires et ne constituent pas une preuve de prévention anticancéreuse.</p>
+
+        <h2>Type et niveau de preuve</h2>
+        <table>
+          <thead>
+            <tr><th>Source</th><th>Design</th><th>Population</th><th>Suivi</th><th>Niveau</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Cohorte rétrospective (PubMed 40839273)</td><td>Cohorte observationnelle</td><td>Adultes surpoids/obèses, GLP-1 RA vs non-utilisateurs</td><td>~3,9 ans</td><td>Observationnel élevé</td></tr>
+            <tr><td>Target-trial emulation ASCO 2025</td><td>Target-trial emulation</td><td>T2D, GLP-1 RA vs DPP-4</td><td>~3,9 ans</td><td>Observationnel élevé</td></tr>
+            <tr><td>Méta-analyses cliniques (JCI 2025)</td><td>Revues systématiques</td><td>Utilisateurs GLP-1 RA</td><td>Variable</td><td>Intermédiaire</td></tr>
+            <tr><td>Étude laboratoire NETRF 2025</td><td>In vitro / modèles NENs</td><td>Lignes cellulaires tumeurs neuroendocrines</td><td>N/A</td><td>Préclinique</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Résultats vérifiés</h2>
+
+        <h3>Cohorte rétrospective majeure (PubMed 2025-01-09, PMID 40839273)</h3>
+        <ul>
+          <li><strong>Incidence globale 14 cancers :</strong> 13,6 vs 16,4 pour 1000 personnes-années (GLP-1 RA vs non-utilisateurs)</li>
+          <li><strong>HR global :</strong> 0,83 (IC 95 % 0,76–0,91) — baisse risque global cancer</li>
+          <li><strong>Réductions spécifiques :</strong></li>
+          <ul>
+            <li>Endomètre : HR 0,75</li>
+            <li>Ovaire : HR 0,53</li>
+            <li>Méningiomes : HR 0,69</li>
+          </ul>
+          <li><strong>Signal rein :</strong> HR 1,38 (IC 95 % 0,99–1,93) — non significatif mais signal à surveiller</li>
+        </ul>
+
+        <h3>Target-trial emulation ASCO 2025 (T2D, GLP-1 RA vs DPP-4)</h3>
+        <ul>
+          <li>Baisse 7 % risque cancer lié à l'obésité</li>
+          <li>Baisse 8 % mortalité toutes causes</li>
+          <li>Suivi ~3,9 ans</li>
+          <li>Résultats fragmentaires disponibles via compte-rendu (abstract non peer-reviewed complet)</li>
+        </ul>
+
+        <h3>Revues cliniques et méta-analyses (JCI 2025, Valencia-Rincón)</h3>
+        <ul>
+          <li>Pas de hausse systématique incidence cancers sous GLP-1 RA</li>
+          <li>Certaines analyses montrant protection pour plusieurs cancers gastro-intestinaux</li>
+          <li>Conclusions : absence augmentation majeure risque global, signaux hétérogènes</li>
+        </ul>
+
+        <h3>Étude laboratoire tumeurs neuroendocrines (NETRF, déc. 2025)</h3>
+        <ul>
+          <li>GLP-1 RA ne « nourrissent » les cellules que si elles expriment le récepteur GLP-1</li>
+          <li>Données in vitro, sans traduction clinique directe</li>
+          <li>Nécessite prudence mais ne constitue pas preuve de risque clinique</li>
+        </ul>
+
+        <h2>Sécurité / Pharmacovigilance</h2>
+        <ul>
+          <li>Aucune alerte majeure pharmacovigilance à ce jour sur explosion cancers sous GLP-1 RA</li>
+          <li>Signaux rénaux et analyses laboratoire sur modèles tumeurs neuroendocrines imposent prudence</li>
+          <li>Surveillance continue recommandée, notamment cancers thyroïdiens et rénaux</li>
+        </ul>
+
+        <h2>Limites majeures</h2>
+        <ul>
+          <li>Données observationnelles : risque confusion (poids, contrôle glycémique, autres traitements), pas de randomisation sur cancer</li>
+          <li>Durée suivi encore limitée pour événements oncologiques, surtout tumeurs à longue latence</li>
+          <li>Résultats études laboratoire (croissance tumorale) ne sont pas preuves bénéfice/risque clinique</li>
+          <li>Target-trial emulation : résultats fragmentaires, pas encore publication complète peer-reviewed</li>
+          <li>Impossible d'inférer causalité ou indication oncologique à partir de ces données</li>
+        </ul>
+
+        <h2>Sources primaires</h2>
+        <ul>
+          <li>PubMed – « GLP‑1 Receptor Agonists and Cancer Risk in Adults With Obesity » (PMID 40839273) : <a href="https://pubmed.ncbi.nlm.nih.gov/40839273/" target="_blank" rel="noopener">https://pubmed.ncbi.nlm.nih.gov/40839273/</a></li>
+          <li>JCI – « GLP‑1 receptor agonists and cancer: current clinical evidence » (Valencia-Rincón) : <a href="https://www.jci.org/articles/view/194743" target="_blank" rel="noopener">https://www.jci.org/articles/view/194743</a></li>
+          <li>ASCO 2025 / AJMC – Compte-rendu target-trial emulation : <a href="https://www.ajmc.com/view/can-glp-1-receptor-agonists-curb-cancer-study-links-drugs-to-reduced-risk-in-obesity-related-cases" target="_blank" rel="noopener">https://www.ajmc.com/view/can-glp-1-receptor-agonists-curb-cancer-study-links-drugs-to-reduced-risk-in-obesity-related-cases</a></li>
+          <li>NETRF – Étude laboratoire NENs : <a href="https://netrf.org/2025/12/17/glp-1-drugs-and-neuroendocrine-cancer-what-a-new-study-suggests/" target="_blank" rel="noopener">https://netrf.org/2025/12/17/glp-1-drugs-and-neuroendocrine-cancer-what-a-new-study-suggests/</a></li>
+        </ul>
+      </article>
+
+      <div class="disclaimer">
+        <h3>⚠️ Avertissement</h3>
+        <p>Cet article est informatif uniquement. Il ne constitue pas un avis médical. Les données observationnelles ne prouvent pas la causalité. Consultez un oncologue pour toute décision médicale.</p>
+      </div>
+    </main>
+
+    <footer role="contentinfo">
+      <p>Peptides Decoded © 2026 · <a href="/editorial-policy/">Politique éditoriale</a> · <a href="/privacy/">Confidentialité</a></p>
+    </footer>
+  </div>
+</body>
+</html>
