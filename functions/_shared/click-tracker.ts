@@ -80,6 +80,35 @@ export function validateRedirect(target: string): boolean {
   }
 }
 
+// ─── Fallback product map ─────────────────────────────────────────
+// Used when Supabase lookup is unavailable.
+// Keep this in sync with `products/` and the Supabase seed.
+const FALLBACK_PRODUCTS: Readonly<Record<string, string>> = Object.freeze({
+  "aod9604-5mg-vial": "https://rcpeptides.to/products/aod-9604-5mg?ref=PEPTIDESDECODED",
+  "argirelin-200mg-vial": "https://rcpeptides.to/products/argirelin-200mg-vial?ref=PEPTIDESDECODED",
+  "bpc157-10mg-vial": "https://rcpeptides.to/products/bpc157-10mg-vial?ref=PEPTIDESDECODED",
+  "dihexa-60x10mg": "https://rcpeptides.to/products/dihexa-60x10mg?ref=PEPTIDESDECODED",
+  "ghk-cu-50mg-vial": "https://rcpeptides.to/products/ghk-cu-50mg-vial?ref=PEPTIDESDECODED",
+  "ipamorelin-10mg-vial": "https://rcpeptides.to/products/ipamorelin-10mg-vial?ref=PEPTIDESDECODED",
+  "l-carnitine-500mg": "https://rcpeptides.to/products/l-carnitine-500mg?ref=PEPTIDESDECODED",
+  "l-glutathione": "https://rcpeptides.to/products/l-glutathione?ref=PEPTIDESDECODED",
+  "matrixyl-10mg-vial": "https://rcpeptides.to/products/matrixyl-10mg-vial?ref=PEPTIDESDECODED",
+  "melatonin-10mg-vial": "https://rcpeptides.to/products/melatonin-10mg-vial?ref=PEPTIDESDECODED",
+  "nad-500mg-vial": "https://rcpeptides.to/products/nad-500mg-vial?ref=PEPTIDESDECODED",
+  "orexin-a-10mg-vial": "https://rcpeptides.to/products/orexin-a-10mg-vial?ref=PEPTIDESDECODED",
+  "ss-31-10mg-vial": "https://rcpeptides.to/products/ss-31-10mg-vial?ref=PEPTIDESDECODED",
+  "tb500-10mg-vial": "https://rcpeptides.to/products/tb500-10mg-vial?ref=PEPTIDESDECODED",
+  "tudca-100x500mg": "https://rcpeptides.to/products/tudca-100x500mg?ref=PEPTIDESDECODED",
+});
+
+export function getFallbackProduct(slug: string): ProductRow | null {
+  const url = FALLBACK_PRODUCTS[slug];
+  if (!url || !validateRedirect(url)) {
+    return null;
+  }
+  return { rc_product_url: url };
+}
+
 // ─── Supabase helpers ────────────────────────────────────────────
 async function supabaseJson<T>(
   env: Env,
@@ -180,15 +209,15 @@ export function createClickHandler(options: ClickHandlerOptions) {
       }
 
       // Product lookup
-      let product: ProductRow | null;
+      let product: ProductRow | null = null;
       try {
         product = await getProduct(env, rawSlug);
       } catch (err) {
         console.error("Supabase lookup error:", err);
-        return new Response("Service unavailable", {
-          status: 503,
-          headers: CORS_HEADERS,
-        });
+      }
+
+      if (!product) {
+        product = getFallbackProduct(rawSlug);
       }
 
       if (!product || !validateRedirect(product.rc_product_url)) {

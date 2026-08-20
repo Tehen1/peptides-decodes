@@ -1,0 +1,62 @@
+{
+  "aod9604-5mg-vial": {
+    "name": "AOD9604 5mg",
+    "rc_product_url": "https://rcpeptides.to/products/aod-9604-5mg?ref=PEPTIDESDECODED"
+  },
+  "argirelin-200mg-vial": {
+    "name": "Argirelin 200mg",
+    "rc_product_url": "https://rcpeptides.to/products/argirelin-200mg-vial?ref=PEPTIDESDECODED"
+  },
+  "bpc157-10mg-vial": {
+    "name": "BPC-157 10mg",
+    "rc_product_url": "https://rcpeptides.to/products/bpc157-10mg-vial?ref=PEPTIDESDECODED"
+  },
+  "dihexa-60x10mg": {
+    "name": "Dihexa 100x10mg",
+    "rc_product_url": "https://rcpeptides.to/products/dihexa-60x10mg?ref=PEPTIDESDECODED"
+  },
+  "ghk-cu-50mg-vial": {
+    "name": "GHK-CU 50mg",
+    "rc_product_url": "https://rcpeptides.to/products/ghk-cu-50mg-vial?ref=PEPTIDESDECODED"
+  },
+  "ipamorelin-10mg-vial": {
+    "name": "Ipamorelin 10mg",
+    "rc_product_url": "https://rcpeptides.to/products/ipamorelin-10mg-vial?ref=PEPTIDESDECODED"
+  },
+  "l-carnitine-500mg": {
+    "name": "L-carnitine 5000mg",
+    "rc_product_url": "https://rcpeptides.to/products/l-carnitine-500mg?ref=PEPTIDESDECODED"
+  },
+  "l-glutathione": {
+    "name": "L-glutathione 1500mg",
+    "rc_product_url": "https://rcpeptides.to/products/l-glutathione?ref=PEPTIDESDECODED"
+  },
+  "matrixyl-10mg-vial": {
+    "name": "Matrixyl 10mg",
+    "rc_product_url": "https://rcpeptides.to/products/matrixyl-10mg-vial?ref=PEPTIDESDECODED"
+  },
+  "melatonin-10mg-vial": {
+    "name": "Melatonin 10mg",
+    "rc_product_url": "https://rcpeptides.to/products/melatonin-10mg-vial?ref=PEPTIDESDECODED"
+  },
+  "nad-500mg-vial": {
+    "name": "NAD+ 500mg",
+    "rc_product_url": "https://rcpeptides.to/products/nad-500mg-vial?ref=PEPTIDESDECODED"
+  },
+  "orexin-a-10mg-vial": {
+    "name": "Orexin A 10mg",
+    "rc_product_url": "https://rcpeptides.to/products/orexin-a-10mg-vial?ref=PEPTIDESDECODED"
+  },
+  "ss-31-10mg-vial": {
+    "name": "SS-31 50mg",
+    "rc_product_url": "https://rcpeptides.to/products/ss-31-10mg-vial?ref=PEPTIDESDECODED"
+  },
+  "tb500-10mg-vial": {
+    "name": "TB500 10mg",
+    "rc_product_url": "https://rcpeptides.to/products/tb500-10mg-vial?ref=PEPTIDESDECODED"
+  },
+  "tudca-100x500mg": {
+    "name": "TUDCA 100x500mg",
+    "rc_product_url": "https://rcpeptides.to/products/tudca-100x500mg?ref=PEPTIDESDECODED"
+  }
+}
