@@ -36,7 +36,279 @@ description: "Une lecture critique des essais cliniques sur les peptides : cosm�
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
 
-  <!-- Structured data JSON-LD -->
+  <style>
+    :root {
+      --bg: #fbfaf7;
+      --bg-alt: #f5f3ed;
+      --fg: #17202a;
+      --fg-secondary: #3b4452;
+      --muted: #5f6b76;
+      --border: #dfe4e8;
+      --brand: #155eef;
+      --brand-dark: #0b3b91;
+      --success: #087443;
+      --success-bg: #e9f8ef;
+      --caution: #925d00;
+      --caution-bg: #fff5d6;
+      --risk: #b42318;
+      --risk-bg: #fff0ee;
+      --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+      --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+      --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --shadow: 0 1px 3px rgba(0,0,0,0.05);
+      --content-width: 1180px;
+      --reading-width: 720px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      background:
+        radial-gradient(1200px 800px at 10% -10%, rgba(21,94,239,0.06), transparent 60%),
+        radial-gradient(900px 600px at 90% 10%, rgba(14,165,233,0.06), transparent 55%),
+        linear-gradient(180deg, #fbfaf7 0%, #f5f3ed 100%);
+      color: var(--fg);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 1rem;
+      top: 1rem;
+      width: auto;
+      height: auto;
+      padding: 0.75rem 1rem;
+      background: var(--brand);
+      color: #fff;
+      border-radius: var(--radius-sm);
+      z-index: 1000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding-bottom: 1.5rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--fg);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .logo:hover { color: var(--brand); }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover, nav a:focus {
+      color: var(--brand);
+      outline: 2px solid var(--brand);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
+    .hero {
+      padding: 3rem 0 2rem;
+      max-width: 820px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.12;
+      margin-bottom: 1rem;
+      color: var(--fg);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--fg-secondary);
+      margin-bottom: 1.5rem;
+      max-width: var(--reading-width);
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.875rem 1.75rem;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn:hover, .btn:focus {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow);
+      outline: 2px solid var(--brand);
+      outline-offset: 4px;
+    }
+
+    .btn-primary {
+      background: var(--brand);
+      color: #fff;
+    }
+
+    .btn-primary:hover { background: var(--brand-dark); }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--fg);
+      border: 2px solid var(--border);
+    }
+
+    .btn-secondary:hover { border-color: var(--brand); color: var(--brand); }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 1.5rem 0 0.5rem;
+      color: var(--fg);
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin: 2rem 0;
+    }
+
+    .article-card {
+      background:
+        radial-gradient(600px 400px at 0% 0%, rgba(21,94,239,0.04), transparent 55%),
+        rgba(255,255,255,0.72);
+      backdrop-filter: blur(6px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .article-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: var(--fg);
+    }
+
+    .article-card a {
+      color: var(--brand);
+      text-decoration: none;
+    }
+
+    .article-card a:hover { text-decoration: underline; }
+
+    .meta {
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .evidence-badge {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .evidence-high { background: var(--success-bg); color: var(--success); border: 1px solid var(--success); }
+    .evidence-moderate { background: var(--caution-bg); color: var(--caution); border: 1px solid var(--caution); }
+    .evidence-low { background: rgba(120,113,108,0.12); color: var(--fg-secondary); border: 1px solid var(--border); }
+    .evidence-preclinical { background: rgba(120,113,108,0.12); color: var(--muted); border: 1px solid var(--border); }
+    .evidence-not-demonstrated { background: var(--risk-bg); color: var(--risk); border: 1px solid var(--risk); }
+    .evidence-safety-signal { background: var(--risk-bg); color: var(--risk); border: 1px solid var(--risk); }
+
+    .card {
+      background:
+        radial-gradient(600px 400px at 0% 0%, rgba(21,94,239,0.04), transparent 55%),
+        rgba(255,255,255,0.72);
+      backdrop-filter: blur(6px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin: 1.25rem 0;
+    }
+
+    .disclosure {
+      background: rgba(21,94,239,0.06);
+      border: 1px solid var(--brand);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      margin: 1.25rem 0;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--brand);
+      outline-offset: 4px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { animation: none !important; transition: none !important; }
+    }
+
+    @media print {
+      body { background: white; color: black; }
+      .cta, header, footer { display: none; }
+    }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -335,147 +607,109 @@ description: "Une lecture critique des essais cliniques sur les peptides : cosm�
     </header>
 
     <main role="main">
-      <!-- Hero -->
-      <section class="hero" aria-labelledby="page-title">
-        <h1 id="page-title">La science des peptides, décodée sans battage médiatique</h1>
-        <p>Essais cliniques, sécurité, réglementation et recherche thérapeutique — avec des sources primaires et des verdicts compréhensibles.</p>
+      <a class="skip-link" href="#main">Aller au contenu</a>
+      <section class="hero" aria-labelledby="hero-title">
+        <h1 id="hero-title">Peptides Decoded</h1>
+        <p>La science des peptides, décodée sans battage médiatique. Essais cliniques, sécurité, réglementation et recherche thérapeutique — avec des sources primaires et des verdicts compréhensibles.</p>
         <div class="cta-buttons">
-          <a href="/#articles" class="btn btn-primary">Explorer les articles</a>
-          <a href="/#newsletter" class="btn btn-secondary">S'abonner à la newsletter</a>
+          <a href="#newsletter" class="btn btn-primary">Recevoir les analyses</a>
+          <a href="/articles/" class="btn btn-secondary">Explorer les articles</a>
         </div>
       </section>
 
-      <!-- Indicateurs éditoriaux -->
-      <section class="stats" aria-label="Indicateurs éditoriaux">
-        <div class="stat-card">
-          <div class="stat-value">26</div>
-          <div class="stat-label">Articles publiés</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value">8</div>
-          <div class="stat-label">Domaines couverts</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value">100%</div>
-          <div class="stat-label">Sources vérifiées</div>
+      <section id="value" aria-labelledby="value-title">
+        <h2 id="value-title" class="section-title">Ce que vous trouverez ici</h2>
+        <div class="articles-grid">
+          <div class="article-card">
+            <h3>Essais cliniques décryptés</h3>
+            <p>Chaque analyse précise le type d’étude, la population, le comparateur, les résultats chiffrés et les limites.</p>
+          </div>
+          <div class="article-card">
+            <h3>Sources primaires vérifiées</h3>
+            <p>DOI, PMID, ClinicalTrials.gov, FDA, EMA — pas de conclusion sans référence accessible.</p>
+          </div>
+          <div class="article-card">
+            <h3>Verdicts lisibles</h3>
+            <p>Données solides, prometteuses, limitées, préclinique ou non démontré : chaque verdict indique le niveau de preuve.</p>
+          </div>
+          <div class="article-card">
+            <h3>Sécurité et réglementation</h3>
+            <p>Pharmacovigilance, signaux de sécurité, guidelines EMA/FDA et état des autorisations.</p>
+          </div>
         </div>
       </section>
 
-      <!-- Derniers articles -->
-      <h2 class="section-title" id="articles">Derniers articles</h2>
-      <div class="articles-grid">
-        <article class="article-card">
-          <h3><a href="/articles/glp1-perte-de-poids/">Tirzépatide vs sémaglutide : perte de poids</a></h3>
-          <p>Comparaison des essais SURMOUNT et STEP sur la perte de poids, la sécurité et les choix cliniques.</p>
-          <div class="meta">
-            <span class="evidence-badge evidence-high">Phase 3 · RCT</span>
-            <span>· 19 août 2026</span>
-          </div>
-        </article>
+      <section id="articles" aria-labelledby="articles-title">
+        <h2 id="articles-title" class="section-title">Dernières analyses</h2>
+        <div class="articles-grid">
+          <article class="article-card">
+            <span class="evidence-badge evidence-high">Données solides</span>
+            <h3><a href="/articles/glp1-perte-de-poids/">Tirzépatide et perte de poids</a></h3>
+            <p class="meta">GLP‑1 · Essai randomisé contrôlé · Mis à jour août 2026</p>
+          </article>
+          <article class="article-card">
+            <span class="evidence-badge evidence-moderate">Données prometteuses</span>
+            <h3><a href="/articles/glp1-parkinson/">GLP‑1 et maladie de Parkinson</a></h3>
+            <p class="meta">Neurologie · Méta‑analyse + essais phase 2/3 · Mis à jour août 2026</p>
+          </article>
+          <article class="article-card">
+            <span class="evidence-badge evidence-moderate">Données prometteuses</span>
+            <h3><a href="/articles/glp1-cancer/">GLP‑1 et risque de cancer</a></h3>
+            <p class="meta">Oncologie · Cohorte + méta‑analyse · Mis à jour août 2026</p>
+          </article>
+          <article class="article-card">
+            <span class="evidence-badge evidence-high">Données solides</span>
+            <h3><a href="/articles/glp1-metabolisme/">Agonistes GLP‑1 dans l’obésité</a></h3>
+            <p class="meta">Métabolisme · Essais de phase 3 · Mis à jour août 2026</p>
+          </article>
+          <article class="article-card">
+            <span class="evidence-badge evidence-moderate">Données prometteuses</span>
+            <h3><a href="/articles/glp1-glucagon/">Survodutide et co‑agonistes glucagon/GLP‑1</a></h3>
+            <p class="meta">Métabolisme · Phase 3 en cours · Mis à jour août 2026</p>
+          </article>
+          <article class="article-card">
+            <span class="evidence-badge evidence-moderate">Données prometteuses</span>
+            <h3><a href="/articles/peptides-cosmetiques/">Peptides cosmétiques</a></h3>
+            <p class="meta">Cosmétique · Essais cliniques · Mis à jour août 2026</p>
+          </article>
+        </div>
+        <p style="margin-top:1rem"><a href="/articles/" class="btn btn-secondary">Voir tous les articles</a></p>
+      </section>
 
-        <article class="article-card">
-          <h3><a href="/articles/glp1-cancer/">GLP-1 et risque de cancer</a></h3>
-          <p>Données observationnelles sur l'incidence des cancers sous GLP-1RA : signaux, limites et surveillance.</p>
-          <div class="meta">
-            <span class="evidence-badge evidence-moderate">Cohorte · Observationnel</span>
-            <span>· 19 août 2026</span>
-          </div>
-        </article>
+      <section id="newsletter" aria-labelledby="newsletter-title">
+        <h2 id="newsletter-title" class="section-title">Newsletter</h2>
+        <div class="card">
+          <p>Recevez les analyses directement par e-mail. Une à deux fois par mois, sans spam et sans battage médiatique.</p>
+          <form id="signupForm" novalidate>
+            <label for="email">Votre adresse e-mail</label>
+            <div class="signup-row">
+              <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-help email-error">
+              <button type="submit">Recevoir les analyses</button>
+            </div>
+            <p id="email-help">Une analyse environ toutes les deux semaines. Désinscription en un clic.</p>
+            <p id="email-error" role="alert" hidden>Saisissez une adresse e-mail valide.</p>
+            <p id="signup-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
 
-        <article class="article-card">
-          <h3><a href="/articles/glp1-neurologie/">GLP-1 et neurologie</a></h3>
-          <p>Essais en cours dans Parkinson et Alzheimer. Signaux neuroprotecteurs et réalités cliniques.</p>
-          <div class="meta">
-            <span class="evidence-badge evidence-low">Phase 2 · Exploratoire</span>
-            <span>· 19 août 2026</span>
-          </div>
-        </article>
-
-        <article class="article-card">
-          <h3><a href="/articles/glp1-glucagon/">Survodutide : co-agoniste glucagon/GLP-1</a></h3>
-          <p>Programme SYNCHRONIZE phase 3 pour l'obésité. Résultats de phase 2 et perspectives.</p>
-          <div class="meta">
-            <span class="evidence-badge evidence-moderate">Phase 3 · En cours</span>
-            <span>· 19 août 2026</span>
-          </div>
-        </article>
-
-        <article class="article-card">
-          <h3><a href="/articles/glp1-gip/">Co-agonistes GIP/GLP-1 (GASOLIN)</a></h3>
-          <p>Mécanismes de la co-activation GIP/GLP-1 sur l'appétit et le métabolisme.</p>
-          <div class="meta">
-            <span class="evidence-badge evidence-low">Phase 2 · Mécanisme</span>
-            <span>· 19 août 2026</span>
-          </div>
-        </article>
-
-        <article class="article-card">
-          <h3><a href="/articles/reglementation/">EMA 2026 : peptides synthétiques</a></h3>
-          <p>Nouvelles lignes directrices EMA sur la fabrication et le contrôle qualité des peptides synthétiques.</p>
-          <div class="meta">
-            <span class="evidence-badge evidence-preclinical">Réglementaire</span>
-            <span>· 19 août 2026</span>
-          </div>
-        </article>
-      </div>
-
-      <!-- Rubriques -->
-      <h2 class="section-title">Rubriques</h2>
-      <div class="category-grid">
-        <div class="category-card">
-          <h3><a href="/articles/cosmetiques/">Peptides cosmétiques</a></h3>
-          <p>Pal-KTTKS, Argireline, microneedles — données cosmétiques vs allégations marketing</p>
+      <section id="transparency" aria-labelledby="transparency-title">
+        <h2 id="transparency-title" class="section-title">Transparence et affiliation</h2>
+        <div class="disclosure">
+          <h3>Comment nous finançons le site</h3>
+          <p>Peptides Decoded peut recevoir une compensation si vous utilisez certains liens. Cela n’influence pas nos conclusions : chaque article indique le type d’étude, les limites, les conflits d’intérêts et les sources primaires.</p>
+          <p><a href="/editorial-policy/">Notre méthode</a> · <a href="/privacy/">Confidentialité</a> · <a href="/terms/">Conditions</a></p>
         </div>
-        <div class="category-card">
-          <h3><a href="/articles/glp1-perte-de-poids/">GLP-1, GIP et glucagon</a></h3>
-          <p>Tirzepatide, retatrutide, survodutide — essais, sécurité, cancérologie</p>
-        </div>
-        <div class="category-card">
-          <h3><a href="/articles/metabolisme/">Peptides métaboliques</a></h3>
-          <p>Obésité, MASLD/MASH, FGF21 — données métaboliques vérifiées</p>
-        </div>
-        <div class="category-card">
-          <h3><a href="/articles/therapeutiques/">Peptides thérapeutiques</a></h3>
-          <p>Développement clinique, CMC, réglementation</p>
-        </div>
-        <div class="category-card">
-          <h3><a href="/articles/oncologie/">Oncologie</a></h3>
-          <p>Peptides onco-thérapeutiques, vaccins, signaux de sécurité</p>
-        </div>
-        <div class="category-card">
-          <h3><a href="/articles/neurologie/">Neurologie</a></h3>
-          <p>GLP-1RA, neuroprotection, essais Parkinson/Alzheimer</p>
-        </div>
-        <div class="category-card">
-          <h3><a href="/articles/securite/">Sécurité et pharmacovigilance</a></h3>
-          <p>Safety reporting, signaux, monitoring</p>
-        </div>
-        <div class="category-card">
-          <h3><a href="/articles/reglementation/">Réglementation</a></h3>
-          <p>EMA, FDA, ANSM — guidelines et statuts</p>
-        </div>
-      </div>
-
-      <!-- Newsletter -->
-      <section id="newsletter" style="margin-top: 4rem; padding: 2rem; background: white; border: 1px solid var(--border); border-radius: var(--radius);">
-        <h2 style="font-family: var(--font-serif); font-size: 1.75rem; margin-bottom: 1rem; color: var(--fg);">Newsletter</h2>
-        <p style="color: var(--fg-secondary); margin-bottom: 1.5rem;">Recevez les dernières fiches et analyses directement par email. Fréquence : 1 à 2 numéros par mois. Désinscription en un clic.</p>
-        <form style="display: flex; gap: 1rem; flex-wrap: wrap;" aria-label="Inscription newsletter">
-          <label for="email" style="display: none;">Email</label>
-          <input type="email" id="email" name="email" placeholder="votre@email.com" required
-                 style="flex: 1; min-width: 250px; padding: 0.875rem 1rem; border: 2px solid var(--border); border-radius: var(--radius); font-size: 1rem; font-family: var(--font-sans);">
-          <button type="submit" class="btn btn-primary">S'abonner</button>
-        </form>
-        <p style="font-size: 0.875rem; color: var(--muted); margin-top: 1rem;">
-          En vous abonnant, vous acceptez notre <a href="/privacy" style="color: var(--accent);">politique de confidentialité</a>.
-          Aucun spam. Désinscription immédiate.
-        </p>
       </section>
     </main>
 
-    <footer role="contentinfo">
-      <p>Peptides Decoded © 2026 · <a href="/editorial-policy">Politique éditoriale</a> · <a href="/privacy">Confidentialité</a> · <a href="/terms">Conditions</a></p>
-      <p style="margin-top: 0.5rem; font-size: 0.875rem;">Contenu informatif uniquement. Aucune recommandation médicale.</p>
+    <footer>
+      <p>Peptides Decoded — Contenu informatif uniquement. Aucune recommandation médicale.</p>
+      <p>
+        <a href="/privacy/">Confidentialité</a> ·
+        <a href="/terms/">Conditions</a> ·
+        <a href="/editorial-policy/">Méthodologie</a>
+      </p>
     </footer>
   </div>
 </body>
