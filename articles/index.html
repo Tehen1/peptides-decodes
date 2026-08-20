@@ -1,71 +1,85 @@
+---
+title: "Articles — Peptides Decoded"
+description: "Tous les articles de Peptides Decoded : peptides cosmétiques, GLP-1/GIP/glucagon, métabolisme, oncologie, neurologie, sécurité, réglementation."
+---
+
 <!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Articles — Peptides Decoded</title>
-  <meta name="description" content="Tous les articles de Peptides Decoded : peptides cosmétiques, GLP-1/GIP/glucagon, métabolisme, oncologie, neurologie, sécurité, réglementation, pharmacovigilance.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Articles — Peptides Decoded</title>
+  <meta name="description" content="Tous les articles de Peptides Decoded : peptides cosmétiques, GLP-1/GIP/glucagon, métabolisme, oncologie, neurologie, sécurité, réglementation.">
   <link rel="canonical" href="https://peptides-decodes.pages.dev/articles/">
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://peptides-decodes.pages.dev/articles/">
   <meta property="og:title" content="Articles — Peptides Decoded">
-  <meta property="og:description" content="Tous les articles : peptides cosmétiques, GLP-1, oncologie, neurologie, sécurité, réglementation, pharmacovigilance.">
-
-  <!-- Twitter -->
+  <meta property="og:description" content="Analyses basées sur sources primaires : essais cliniques, registres, autorités sanitaires.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Articles — Peptides Decoded">
   <meta name="twitter:description" content="Analyses basées sur sources primaires : essais cliniques, registres, autorités sanitaires.">
-
-  <!-- JSON-LD -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "Articles — Peptides Decoded",
     "description": "Tous les articles de Peptides Decoded organisés par catégorie.",
-    "publisher": { "@type": "Organization", "name": "Peptides Decoded" }
+    "url": "https://peptides-decodes.pages.dev/articles/",
+    "inLanguage": "fr",
+    "publisher": { "@type": "Organization", "name": "Peptides Decoded", "url": "https://peptides-decodes.pages.dev/" }
   }
   </script>
-
   <style>
     :root {
-      --bg: #0f172a; --fg: #f8fafc; --muted: #94a3b8;
-      --accent: #38bdf8; --card-bg: #1e293b; --border: #334155;
-      --success: #22c55e; --warning: #f59e0b; --danger: #ef4444;
-      --radius: 12px; --shadow: 0 10px 30px rgba(0,0,0,0.4);
-      --font-sans: ui-sans-serif, system-ui, -apple-system, sans-serif;
+      --bg: #faf8f5; --bg-alt: #f3efe9; --fg: #1c1917; --fg-secondary: #44403c; --muted: #78716c;
+      --border: #e7e5e4; --accent: #1e40af; --accent-light: #3b82f6;
+      --success: #15803d; --success-bg: #dcfce7; --warning: #c2410c; --warning-bg: #ffedd5;
+      --danger: #dc2626; --danger-bg: #fee2e2; --info: #0e7490; --info-bg: #cffafe;
+      --font-serif: "Source Serif 4", Georgia, serif;
+      --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+      --font-mono: ui-monospace, monospace;
+      --radius: 8px; --shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: var(--font-sans); background: linear-gradient(135deg, var(--bg), #020617 60%); color: var(--fg); line-height: 1.6; min-height: 100vh; }
-    .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
-    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; gap: 1rem; flex-wrap: wrap; }
-    .logo { font-size: 1.5rem; font-weight: 800; background: linear-gradient(90deg, var(--accent), #22d3ee); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-decoration: none; color: var(--accent); }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); background: var(--bg); color: var(--fg); line-height: 1.7; min-height: 100vh; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+    .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; gap: 1rem; flex-wrap: wrap; padding-bottom: 1.5rem; border-bottom: 2px solid var(--border); }
+    .logo { font-family: var(--font-serif); font-size: 1.75rem; font-weight: 700; color: var(--fg); text-decoration: none; letter-spacing: -0.02em; }
+    .logo:hover { color: var(--accent); }
     nav ul { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; }
-    nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
-    nav a:hover, nav a:focus { color: var(--fg); outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
+    nav a:hover, nav a:focus { color: var(--accent); outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
     .breadcrumb { font-size: 0.875rem; color: var(--muted); margin-bottom: 1.5rem; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
-    .section { margin-bottom: 3rem; }
-    .section-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--fg); display: flex; align-items: center; gap: 0.75rem; }
-    .section-title::before { content: ""; width: 4px; height: 1.5rem; background: var(--accent); border-radius: 2px; }
-    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow); transition: transform 0.2s ease, border-color 0.2s ease; }
-    .card:hover, .card:focus-within { transform: translateY(-4px); border-color: var(--accent); }
-    .card h3 { font-size: 1.125rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--fg); }
-    .card p { color: var(--muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem; }
-    .evidence-badge { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 999px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
-    .evidence-high { background: rgba(34, 197, 94, 0.15); color: var(--success); border: 1px solid var(--success); }
-    .evidence-moderate { background: rgba(245, 158, 11, 0.15); color: var(--warning); border: 1px solid var(--warning); }
-    .evidence-low { background: rgba(239, 68, 68, 0.15); color: var(--danger); border: 1px solid var(--danger); }
-    .meta { font-size: 0.8rem; color: var(--muted); }
-    .meta a { color: var(--accent); text-decoration: none; }
-    .meta a:hover { text-decoration: underline; }
-    footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.875rem; }
+    h1 { font-family: var(--font-serif); font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 700; margin-bottom: 1rem; color: var(--fg); }
+    h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1.25rem; color: var(--fg); padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+    h3 { font-size: 1.125rem; font-weight: 600; margin: 1.5rem 0 0.75rem; color: var(--fg-secondary); }
+    p { color: var(--fg-secondary); margin-bottom: 1rem; }
+    .category-section { margin-bottom: 3rem; }
+    .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+    .article-card { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; transition: box-shadow 0.2s; }
+    .article-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    .article-card h3 { font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--fg); line-height: 1.3; }
+    .article-card a { color: var(--accent); text-decoration: none; }
+    .article-card a:hover { text-decoration: underline; }
+    .meta { font-size: 0.875rem; color: var(--muted); margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+    .evidence-badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; font-family: var(--font-mono); }
+    .evidence-high { background: var(--success-bg); color: var(--success); border: 1px solid var(--success); }
+    .evidence-moderate { background: var(--warning-bg); color: var(--warning); border: 1px solid var(--warning); }
+    .evidence-low { background: var(--danger-bg); color: var(--danger); border: 1px solid var(--danger); }
+    .evidence-preclinical { background: var(--info-bg); color: var(--info); border: 1px solid var(--info); }
+    footer { margin-top: 4rem; padding-top: 2rem; border-top: 2px solid var(--border); text-align: center; color: var(--muted); font-size: 0.875rem; }
     footer a { color: var(--accent); text-decoration: none; }
-    @media (max-width: 640px) { .container { padding: 1.5rem 1rem; } }
-    @media print { body { background: white; color: black; } header, footer, .breadcrumb { display: none; } }
+    @media (max-width: 640px) { .container { padding: 1.5rem 1rem; } header { flex-direction: column; align-items: flex-start; } }
+    @media print { body { background: white; color: black; } header, footer { display: none; } }
   </style>
 </head>
 <body>
@@ -76,208 +90,149 @@
         <ul>
           <li><a href="/">Accueil</a></li>
           <li><a href="/#articles">Articles</a></li>
-          <li><a href="/#methodology">Méthodologie</a></li>
+          <li><a href="/#newsletter">Newsletter</a></li>
+          <li><a href="/editorial-policy">Méthodologie</a></li>
         </ul>
       </nav>
     </header>
 
-    <nav class="breadcrumb" aria-label="Fil d'Ariane">
-      <span aria-current="page">Articles</span>
-    </nav>
-
     <main role="main">
-      <h1 style="margin-bottom: 2rem;">Tous les articles</h1>
-      <p style="color: var(--muted); margin-bottom: 2rem;">Analyses basées sur les sources primaires : essais cliniques, registres, autorités sanitaires, publications peer-reviewed.</p>
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <span aria-current="page">Articles</span>
+      </nav>
 
-      <section class="section" aria-labelledby="cat-cosmetiques">
-        <h2 class="section-title" id="cat-cosmetiques">Peptides cosmétiques</h2>
-        <div class="card-grid">
-          <article class="card">
-            <span class="evidence-badge evidence-moderate">Essais contrôlés</span>
-            <h3>Palmitoyl pentapeptide-4 (Pal‑KTTKS) dans les crèmes anti‑rides</h3>
-            <p>Effet anti‑rides modéré mais statistiquement significatif à court terme, dans des essais industriels de bonne qualité méthodologique, sans bénéfice clinique majeur démontré au‑delà de quelques mois.</p>
-            <p class="meta"><a href="/articles/peptides-cosmetiques/palmitoyl-pentapeptide-4/">Lire l'article →</a></p>
+      <h1>Tous les articles</h1>
+      <p>Analyses basées sur les sources primaires : essais cliniques, registres, autorités sanitaires, publications peer-reviewed.</p>
+
+      <!-- Peptides cosmétiques -->
+      <div class="category-section">
+        <h2 id="cat-cosmetiques">Peptides cosmétiques</h2>
+        <div class="articles-grid">
+          <article class="article-card">
+            <span class="evidence-badge evidence-moderate">RCT · Niveau intermédiaire</span>
+            <h3><a href="/articles/cosmetiques/palmitoyl-pentapeptide-4/">Palmitoyl pentapeptide-4 (Pal-KTTKS)</a></h3>
+            <p>Effet anti-rides modéré mais statistiquement significatif à court terme dans des essais industriels contrôlés.</p>
+            <div class="meta"><span>19 août 2026</span></div>
           </article>
-          <article class="card">
-            <span class="evidence-badge evidence-low">Études cosmétiques</span>
-            <h3>Acetyl hexapeptide‑8 (Argireline) dans les soins anti‑rides topiques</h3>
-            <p>Améliorations modestes et à court terme de l'apparence des rides dans des études principalement industrielles, avec un profil de tolérance local bon, mais sans démonstration indépendante d'un bénéfice équivalent aux rétinoïdes ou à la toxine botulique.</p>
-            <p class="meta"><a href="/articles/peptides-cosmetiques/acetyl-hexapeptide-8/">Lire l'article →</a></p>
+          <article class="article-card">
+            <span class="evidence-badge evidence-low">RCT · Niveau faible-intermédiaire</span>
+            <h3><a href="/articles/cosmetiques/acetyl-hexapeptide-8/">Acetyl hexapeptide-8 (Argireline)</a></h3>
+            <p>Améliorations modestes de l'apparence des rides dans des études à court terme, sans équivalence démontrée aux rétinoïdes.</p>
+            <div class="meta"><span>19 août 2026</span></div>
           </article>
-          <article class="card">
-            <span class="evidence-badge evidence-moderate">RCT cosmétique</span>
-            <h3>Patch microneedle CLHA + Acetyl hexapeptide‑8 / EGF</h3>
-            <p>Patch microneedle à base d'acide hyaluronique réticulé associant AHP‑8 ou EGF améliore modestement l'apparence des rides et l'hydratation en 29 jours, avec excellente tolérance locale.</p>
-            <p class="meta"><a href="/articles/peptides-cosmetiques/microneedle-clha-ahp8-egf/">Lire l'article →</a></p>
+          <article class="article-card">
+            <span class="evidence-badge evidence-moderate">RCT · Niveau intermédiaire</span>
+            <h3><a href="/articles/cosmetiques/microneedle-clha/">Patch microneedle CLHA + AHP-8/EGF</a></h3>
+            <p>Amélioration modeste des rides et hydratation en 29 jours dans une étude coréenne contrôlée.</p>
+            <div class="meta"><span>19 août 2026</span></div>
           </article>
-          <article class="card">
-            <span class="evidence-badge evidence-high">Méta-analyse · RCT</span>
-            <h3>Peptides cosmétiques pour le vieillissement cutané (méta-analyse 19 RCTs)</h3>
-            <p>Méta-analyse de 19 essais randomisés contrôlés (1 341 participants). Hydratation améliorée, rides réduites de façon modeste, élasticité instable. Suivi court, hétérogénéité élevée.</p>
-            <p class="meta"><a href="/articles/peptides-cosmetiques/">Lire l'article →</a></p>
-          </article>
-          <article class="card">
-            <span class="evidence-badge evidence-low">Préclinique fort · Clinique limité</span>
-            <h3>GHK-Cu (peptide de cuivre) — régénération, cicatrisation, anti-âge</h3>
-            <p>Peptide endogène à forte affinité cuivre : stimulation collagène/GAG, anti-inflammatoire, cicatrisation. Mécanismes in vitro robustes, essais cliniques limités (n petits, courts). Pénétration cutanée = défi majeur. Statut cosmétique (CIR ≤0,1 %).</p>
-            <p class="meta"><a href="/articles/peptides-cosmetiques/ghk-cu/">Lire l'article →</a></p>
+          <article class="article-card">
+            <span class="evidence-badge evidence-moderate">Méta-analyse · 19 essais</span>
+            <h3><a href="/articles/cosmetiques/">Revue systématique : peptides oraux et topiques</a></h3>
+            <p>Méta-analyse de 19 essais randomisés contrôlés sur peptides cosmétiques pour le vieillissement cutané.</p>
+            <div class="meta"><span>19 août 2026</span></div>
           </article>
         </div>
-      </section>
+      </div>
 
-      <section class="section" aria-labelledby="cat-glp1-metabolisme">
-        <h2 class="section-title" id="cat-glp1-metabolisme">GLP-1, GIP et Glucagon — Métabolisme et obésité</h2>
-        <div class="card-grid">
-          <article class="card">
-            <span class="evidence-badge evidence-high">Phase 3 · RCT · Comparatif</span>
-            <h3>Tirzépatide vs sémaglutide : perte de poids</h3>
-            <p>Essais SURMOUNT : −20,2 % vs −13,7 % à 72 semaines. Effets GI comparables. Sémaglutide : base plus mature pour risque cardiovasculaire. Choix individualisé.</p>
-            <p class="meta"><a href="/articles/glp1-perte-de-poids/">Lire l'article →</a></p>
+      <!-- GLP-1, GIP et Glucagon -->
+      <div class="category-section">
+        <h2 id="cat-glp1">GLP-1, GIP et Glucagon — Métabolisme et obésité</h2>
+        <div class="articles-grid">
+          <article class="article-card">
+            <span class="evidence-badge evidence-high">Phase 3 · RCT · Comparatif direct</span>
+            <h3><a href="/articles/glp1-perte-de-poids/">Tirzépatide vs sémaglutide : perte de poids</a></h3>
+            <p>Comparaison des essais SURMOUNT et STEP. Efficacité, sécurité, choix clinique.</p>
+            <div class="meta"><span>19 août 2026</span></div>
           </article>
-          <article class="card">
-            <span class="evidence-badge evidence-high">Phase 3 · 3 essais (REIMAGINE 1,2,3)</span>
-            <h3>CagriSema (cagrilintide + semaglutide) — programme REIMAGINE phase 3</h3>
-            <p>Supériorité HbA1c (−1,91 % vs −1,75 % sema 2,4 mg) et poids (−10 à −12 %) dans 3 essais phase 3 DT2. Sécurité classe GLP-1. Aucune AMM à ce jour.</p>
-            <p class="meta"><a href="/articles/glp1-metabolisme/cagrisema-reimagine/">Lire l'article →</a></p>
+          <article class="article-card">
+            <span class="evidence-badge evidence-moderate">Phase 3 · En cours</span>
+            <h3><a href="/articles/glp1-glucagon/survodutide/">Survodutide : co-agoniste glucagon/GLP-1</a></h3>
+            <p>Programme SYNCHRONIZE phase 3 pour l'obésité. Résultats de phase 2 et perspectives.</p>
+            <div class="meta"><span>19 août 2026</span></div>
           </article>
-          <article class="card">
-            <span class="evidence-badge evidence-high">Phase 3 · 3 essais (ACHIEVE-1,5,J) + pooled hépatique</span>
-            <h3>Orforglipron (GLP-1 oral) — programme ACHIEVE phase 3</h3>
-            <p>Premier GLP-1 oral non-peptidique. HbA1c −1,08 % (12 mg) vs placebo. Poids −4,8 %. Pas d'hypoglycémie sévère. Hépatosécurité = placebo (11 220 patients). Aucune AMM.</p>
-            <p class="meta"><a href="/articles/glp1-metabolisme/orforglipron-achieve/">Lire l'article →</a></p>
+          <article class="article-card">
+            <span class="evidence-badge evidence-low">Phase 2 · Mécanisme</span>
+            <h3><a href="/articles/glp1-gip/gasolin/">Co-agonistes GIP/GLP-1 (GASOLIN)</a></h3>
+            <p>Mécanismes de la co-activation GIP/GLP-1 sur l'appétit et le métabolisme.</p>
+            <div class="meta"><span>19 août 2026</span></div>
           </article>
-          <article class="card">
-            <span class="evidence-badge evidence-high">Phase 3 événementiel · 17 604 patients</span>
-            <h3>SELECT — Semaglutide 2,4 mg et outcomes cardiovasculaires (obésité sans DT2)</h3>
-            <p>MACE −20 % (HR 0,80) chez obèses avec ASCVD, sans DT2. Poids −9,4 %. Mortalité toutes causes −19 % (limite). Extension AMM Wegovy CV 2024.</p>
-            <p class="meta"><a href="/articles/glp1-metabolisme/select-semaglutide-cv/">Lire l'article →</a></p>
+          <article class="article-card">
+            <span class="evidence-badge evidence-moderate">Cohorte · Observationnel</span>
+            <h3><a href="/articles/glp1-cancer/">GLP-1 et risque de cancer</a></h3>
+            <p>Données observationnelles sur l'incidence des cancers sous GLP-1RA. Signaux, limites et surveillance.</p>
+            <div class="meta"><span>19 août 2026</span></div>
           </article>
-          <article class="card">
-            <span class="evidence-badge evidence-moderate">Phase 2 publié · Phase 3 en cours (5 essais)</span>
-            <h3>Retatrutide (triple agoniste GIP/GLP-1/glucagon) — programme TRIUMPH phase 3</h3>
-            <p>Phase 2 NEJM 2023 : −24,2 % poids à 48 sem. 5 essais phase 3 en cours (obésité, MASH, CV/rénal). Aucun résultat phase 3 publié. Signal FC +5–8 bpm, transaminases.</p>
-            <p class="meta"><a href="/articles/glp1-glucagon/retatrutide-triumph/">Lire l'article →</a></p>
-          </article>
-          <article class="card">
-            <span class="evidence-badge evidence-moderate">Phase 2 publié (semaglutide) · Phase 3 en cours (survodutide, retatrutide)</span>
-            <h3>GLP-1 et co-agonistes dans la stéatohépatite métabolique (MASH/NASH)</h3>
-            <p>Semaglutide phase 2 : résolution NASH 59 % vs 17 %. Survodutide SYNCHRONIZE-MASLD phase 3. Retatrutide TRIUMPH-MASH. Graisse hépatique −60 à −80 % phase 2. Aucune AMM MASH.</p>
-            <p class="meta"><a href="/articles/glp1-metabolisme/glp1-mash-nash/">Lire l'article →</a></p>
-          </article>
-          <article class="card">
-            <span class="evidence-badge evidence-moderate">Phase 3 en cours</span>
-            <h3>Survodutide – co-agoniste glucagon / GLP-1 en phase 3 (SYNCHRONIZE)</h3>
-            <p>Co-agoniste dual en phase 3 mondiale (SYNCHRONIZE-1/2) pour l'obésité avec ou sans DT2. Résultats phase 2 prometteurs, aucun résultat phase 3 publié.</p>
-            <p class="meta"><a href="/articles/glp1-glucagon/survodutide/">Lire l'article →</a></p>
-          </article>
-          <article class="card">
-            <span class="evidence-badge evidence-low">Étude mécanisme</span>
-            <h3>Étude GASOLIN – Co-activation GIP/GLP-1 et prise alimentaire</h3>
-            <p>Étude interventionnelle chez 18 hommes obèses, perfusion IV continue de co-agonistes GIP/GLP-1 pour clarifier effets combinés sur appétit et métabolisme. Données détaillées non publiées.</p>
-            <p class="meta"><a href="/articles/glp1-gip/gasolin/">Lire l'article →</a></p>
-          </article>
-          <article class="card">
-            <span class="evidence-badge evidence-moderate">Essais en cours</span>
-            <h3>GLP-1 agonistes dans l'obésité et le métabolisme (sous-populations)</h3>
-            <p>Essais en cours : T1D + obésité (NCT06411210), mode de vie + GLP-1 (NCT07057310), composition corporelle + exercice (NCT07091500). Aucun résultat publié.</p>
-            <p class="meta"><a href="/articles/glp1-metabolisme-sous-populations/">Lire l'article →</a></p>
+          <article class="article-card">
+            <span class="evidence-badge evidence-low">Phase 2 · Exploratoire</span>
+            <h3><a href="/articles/glp1-neurologie/">GLP-1 et neurologie</a></h3>
+            <p>Essais en cours dans Parkinson et Alzheimer. Signaux neuroprotecteurs et réalités cliniques.</p>
+            <div class="meta"><span>19 août 2026</span></div>
           </article>
         </div>
-      </section>
+      </div>
 
-      <section class="section" aria-labelledby="cat-oncologie">
-        <h2 class="section-title" id="cat-oncologie">Oncologie</h2>
-        <div class="card-grid">
-          <article class="card">
-            <span class="evidence-badge evidence-moderate">Méta-analyse · Cohortes</span>
-            <h3>GLP‑1 et risque de cancer</h3>
-            <p>Pas de sur-risque global majeur. Signaux hétérogènes : thyroïde, colorectal, rein. Surveillance à long terme indispensable.</p>
-            <p class="meta"><a href="/articles/glp1-cancer/">Lire l'article →</a></p>
-          </article>
-          <article class="card">
-            <span class="evidence-badge evidence-moderate">Cohorte 1,6M · Target-trial ASCO 2025</span>
-            <h3>GLP‑1 et risque de cancer (données détaillées)</h3>
-            <p>Cohorte 1,6M patients : incidence 13,6 vs 16,4/1000 personnes-années (HR 0,83). Réduction endomètre, ovaire, méningiomes. Signal rein (HR 1,38, IC 0,99–1,93). Target-trial emulation ASCO 2025.</p>
-            <p class="meta"><a href="/articles/glp1-cancer-detaille/">Lire l'article →</a></p>
-          </article>
-          <article class="card">
-            <span class="evidence-badge evidence-moderate">1 AMM (Lu-177-PSMA-617) · Phase 1–3 en cours</span>
-            <h3>Peptide-drug conjugates (PDC) et vaccins peptidiques en oncologie</h3>
-            <p>Lu-177-PSMA-617 (Pluvicto) AMM mCRPC. FAP-2286 phase 1/2. Vaccins néo-antigènes mRNA-4157/V940 + pembro phase 2b/3 (mélanome). TG4050, ELI-002. Aucun vaccin AMM.</p>
-            <p class="meta"><a href="/articles/oncologie/pdc-vaccins-peptidiques/">Lire l'article →</a></p>
+      <!-- Oncologie -->
+      <div class="category-section">
+        <h2 id="cat-oncologie">Oncologie</h2>
+        <div class="articles-grid">
+          <article class="article-card">
+            <span class="evidence-badge evidence-moderate">Cohorte · Observationnel</span>
+            <h3><a href="/articles/glp1-cancer/">GLP-1 et risque de cancer</a></h3>
+            <p>Données observationnelles sur l'incidence des cancers sous GLP-1RA. Signaux, limites et surveillance.</p>
+            <div class="meta"><span>19 août 2026</span></div>
           </article>
         </div>
-      </section>
+      </div>
 
-      <section class="section" aria-labelledby="cat-neurologie">
-        <h2 class="section-title" id="cat-neurologie">Neurologie — GLP-1 et maladies neurodégénératives</h2>
-        <div class="card-grid">
-          <article class="card">
-            <span class="evidence-badge evidence-low">Phase 2 · Préclinique</span>
-            <h3>GLP‑1 et neurologie (Parkinson, Alzheimer)</h3>
-            <p>Signaux neuroprotecteurs en préclinique. Essais de phase 2 en cours (MOST-ABLE, NCT03659682). Aucun bénéfice clinique établi à ce jour.</p>
-            <p class="meta"><a href="/articles/glp1-neurologie/">Lire l'article →</a></p>
-          </article>
-          <article class="card">
-            <span class="evidence-badge evidence-moderate">Méta-analyse · Phase 3</span>
-            <h3>GLP‑1 agonistes dans la maladie de Parkinson</h3>
-            <p>Méta-analyse : améliorations modiques motricité, mais essai phase 3 exénatide négatif. Lixisénatide phase 2 positif mais à confirmer. Aucune indication approuvée.</p>
-            <p class="meta"><a href="/articles/glp1-parkinson/">Lire l'article →</a></p>
-          </article>
-          <article class="card">
-            <span class="evidence-badge evidence-low">Phase 3 négatifs (EVOKE/EVOKE+) · Phase 2b positif (ELAD)</span>
-            <h3>GLP-1 et maladie d'Alzheimer — EVOKE/EVOKE+ (semaglutide oral)</h3>
-            <p>Semaglutide oral 14 mg n'a pas ralenti le déclin CDR-SB (HR 0,98, NS) dans Alzheimer précoce (n=1 840). Biomarqueurs favorables (p-tau181, NfL, hippocampe). Liraglutide ELAD positif. Traduction clinique échoue.</p>
-            <p class="meta"><a href="/articles/glp1-neurologie/glp1-alzheimer-evoke/">Lire l'article →</a></p>
+      <!-- Neurologie -->
+      <div class="category-section">
+        <h2 id="cat-neurologie">Neurologie</h2>
+        <div class="articles-grid">
+          <article class="article-card">
+            <span class="evidence-badge evidence-low">Phase 2 · Exploratoire</span>
+            <h3><a href="/articles/glp1-neurologie/">GLP-1 et neurologie (Parkinson, Alzheimer)</a></h3>
+            <p>Essais en cours, méta-analyses et signaux neuroprotecteurs. Réalité clinique vs enthousiasme préclinique.</p>
+            <div class="meta"><span>19 août 2026</span></div>
           </article>
         </div>
-      </section>
+      </div>
 
-      <section class="section" aria-labelledby="cat-reglementation">
-        <h2 class="section-title" id="cat-reglementation">Réglementation</h2>
-        <div class="card-grid">
-          <article class="card">
-            <span class="evidence-badge evidence-moderate">Ligne directrice EMA</span>
-            <h3>EMA Guideline 2026 – Développement et fabrication des peptides synthétiques</h3>
-            <p>Nouvelle ligne directrice EMA/CHMP/CVMP/QWP/367182/2025 applicable au 1er juin 2026. Fabrication SPPS, caractérisation impuretés, spécifications, dossiers CTA.</p>
-            <p class="meta"><a href="/articles/reglementation/ema-synthetic-peptides-2026/">Lire l'article →</a></p>
+      <!-- Réglementation -->
+      <div class="category-section">
+        <h2 id="cat-reglementation">Réglementation</h2>
+        <div class="articles-grid">
+          <article class="article-card">
+            <span class="evidence-badge evidence-preclinical">Réglementaire · Applicable 01/06/2026</span>
+            <h3><a href="/articles/reglementation/ema-synthetic-peptides-2026/">EMA 2026 : peptides synthétiques</a></h3>
+            <p>Nouvelles lignes directrices EMA sur la fabrication et le contrôle qualité des peptides synthétiques.</p>
+            <div class="meta"><span>19 août 2026</span></div>
           </article>
-          <article class="card">
-            <span class="evidence-badge evidence-moderate">Statut réglementaire</span>
-            <h3>Statut réglementaire et rétractations – Argireline et Survodutide</h3>
-            <p>Argireline : ingrédient cosmétique non approuvé médicament. Survodutide : expérimental phase 3. Aucune rétractation majeure ni modification réglementaire radicale rapportée.</p>
-            <p class="meta"><a href="/articles/reglementation/statut-retractations-argireline-survodutide/">Lire l'article →</a></p>
+          <article class="article-card">
+            <span class="evidence-badge evidence-preclinical">Réglementaire · Statut</span>
+            <h3><a href="/articles/reglementation/statut-retractations-argireline-survodutide/">Statut réglementaire : Argireline et Survodutide</a></h3>
+            <p>Argireline : cosmétique non médicament. Survodutide : expérimental phase 3. Absence de rétractation majeure.</p>
+            <div class="meta"><span>19 août 2026</span></div>
           </article>
         </div>
-      </section>
+      </div>
 
-      <section class="section" aria-labelledby="cat-pharmacovigilance">
-        <h2 class="section-title" id="cat-pharmacovigilance">Pharmacovigilance & Safety Reporting</h2>
-        <div class="card-grid">
-          <article class="card">
-            <span class="evidence-badge evidence-moderate">Guidances FDA/EMA</span>
-            <h3>Safety reporting et pharmacovigilance pour essais de peptides (FDA/EMA)</h3>
-            <p>Guidances FDA 2025 sur responsabilités sponsors/investigateurs, analyses agrégées, portails électroniques. Cadre 21 CFR 312 applicable aux peptides. Recommandations CTTI.</p>
-            <p class="meta"><a href="/articles/pharmacovigilance/fda-ema-safety-reporting/">Lire l'article →</a></p>
+      <!-- Pharmacovigilance -->
+      <div class="category-section">
+        <h2 id="cat-pharmacovigilance">Sécurité et pharmacovigilance</h2>
+        <div class="articles-grid">
+          <article class="article-card">
+            <span class="evidence-badge evidence-preclinical">Réglementaire · Guidance FDA 2025</span>
+            <h3><a href="/articles/securite/fda-ema-safety-reporting/">FDA/EMA : safety reporting dans les essais</a></h3>
+            <p>Obligations de pharmacovigilance pour les essais de peptides selon FDA 2025 et EMA.</p>
+            <div class="meta"><span>19 août 2026</span></div>
           </article>
         </div>
-      </section>
-
-      <section class="section" aria-labelledby="cat-securite">
-        <h2 class="section-title" id="cat-securite">Sécurité — Peptides thérapeutiques</h2>
-        <div class="card-grid">
-          <article class="card">
-            <span class="evidence-badge evidence-moderate">Méta-analyse · Cohortes</span>
-            <h3>GLP‑1 et risque de cancer (données détaillées)</h3>
-            <p>Cohorte 1,6M patients : incidence 13,6 vs 16,4/1000 personnes-années (HR 0,83). Réduction endomètre, ovaire, méningiomes. Signal rein (HR 1,38, IC 0,99–1,93). Target-trial emulation ASCO 2025.</p>
-            <p class="meta"><a href="/articles/glp1-cancer-detaille/">Lire l'article →</a></p>
-          </article>
-        </div>
-      </section>
+      </div>
     </main>
 
     <footer role="contentinfo">
-      <p>Peptides Decoded © 2026 · <a href="/editorial-policy/">Politique éditoriale</a> · <a href="/privacy/">Confidentialité</a></p>
+      <p>Peptides Decoded © 2026 · <a href="/editorial-policy">Politique éditoriale</a> · <a href="/privacy">Confidentialité</a> · <a href="/terms">Conditions</a></p>
     </footer>
   </div>
 </body>
