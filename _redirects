@@ -61,3 +61,21 @@
 /products/ipamorelin-10mg-vial /products/ipamorelin-10mg-vial/ 301
 /products/nad-500mg-vial /products/nad-500mg-vial/ 301
 /products/ghk-cu-50mg-vial /products/ghk-cu-50mg-vial/ 301
+
+# Affiliate click fallbacks
+# If Pages Functions are disabled, these still redirect correctly.
+/api/affiliate/click/argirelin-200mg-vial https://rcpeptides.to/products/argirelin-200mg-vial?ref=PEPTIDESDECODED 302
+/api/affiliate/click/matrixyl-10mg-vial https://rcpeptides.to/products/matrixyl-10mg-vial?ref=PEPTIDESDECODED 302
+/api/affiliate/click/l-carnitine-500mg https://rcpeptides.to/products/l-carnitine-500mg?ref=PEPTIDESDECODED 302
+/api/affiliate/click/l-glutathione https://rcpeptides.to/products/l-glutathione?ref=PEPTIDESDECODED 302
+/api/affiliate/click/tudca-100x500mg https://rcpeptides.to/products/tudca-100x500mg?ref=PEPTIDESDECODED 302
+/api/affiliate/click/melatonin-10mg-vial https://rcpeptides.to/products/melatonin-10mg-vial?ref=PEPTIDESDECODED 302
+/api/affiliate/click/bpc157-10mg-vial https://rcpeptides.to/products/bpc157-10mg-vial?ref=PEPTIDESDECODED 302
+/api/affiliate/click/tb500-10mg-vial https://rcpeptides.to/products/tb500-10mg-vial?ref=PEPTIDESDECODED 302
+/api/affiliate/click/ss-31-10mg-vial https://rcpeptides.to/products/ss-31-10mg-vial?ref=PEPTIDESDECODED 302
+/api/affiliate/click/orexin-a-10mg-vial https://rcpeptides.to/products/orexin-a-10mg-vial?ref=PEPTIDESDECODED 302
+/api/affiliate/click/dihexa-60x10mg https://rcpeptides.to/products/dihexa-60x10mg?ref=PEPTIDESDECODED 302
+/api/affiliate/click/aod9604-5mg-vial https://rcpeptides.to/products/aod-9604-5mg?ref=PEPTIDESDECODED 302
+/api/affiliate/click/ipamorelin-10mg-vial https://rcpeptides.to/products/ipamorelin-10mg-vial?ref=PEPTIDESDECODED 302
+/api/affiliate/click/nad-500mg-vial https://rcpeptides.to/products/nad-500mg-vial?ref=PEPTIDESDECODED 302
+/api/affiliate/click/ghk-cu-50mg-vial https://rcpeptides.to/products/ghk-cu-50mg-vial?ref=PEPTIDESDECODED 302

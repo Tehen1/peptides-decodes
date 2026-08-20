@@ -7,6 +7,8 @@
 // Uses shared canonical click-tracker
 // =====================================================
 
+console.debug("[affiliate] Pages Function loaded for /api/affiliate/click/[slug]");
+
 import { createClickHandler, type Env } from "../../_shared/click-tracker";
 
 export type { Env };
