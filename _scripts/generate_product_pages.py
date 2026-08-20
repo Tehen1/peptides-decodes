@@ -63,51 +63,7 @@ template = '''<!doctype html>
     }}
   }}
   </script>
-  <style>
-    :root {{
-      --bg:#fafafa; --fg:#1e293b; --muted:#64748b; --accent:#0ea5e9; --card:#ffffff; --border:#e2e8f0;
-      --success:#16a34a; --warning:#d97706; --danger:#dc2626; --radius:12px;
-      --font-sans:ui-sans-serif,system-ui,-apple-system,sans-serif;
-      --font-serif:ui-serif,Georgia,Cambria,serif;
-      --font-mono:ui-monospace,SFMono-Regular,Menlo,monospace;
-    }}
-    @media (prefers-color-scheme:dark){{ :root{{ --bg:#0f172a; --fg:#f8fafc; --muted:#94a3b8; --card:#1e293b; --border:#334155; }} }}
-    @media (prefers-reduced-motion:reduce){{ *{{animation:none!important;transition:none!important}} }}
-    *{{box-sizing:border-box;margin:0;padding:0}}
-    body{{font-family:var(--font-sans);background:var(--bg);color:var(--fg);line-height:1.6;min-height:100vh}}
-    .container{{max-width:900px;margin:0 auto;padding:2rem 1.5rem}}
-    header{{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;gap:1rem;flex-wrap:wrap}}
-    .logo{{font-size:1.5rem;font-weight:800;color:var(--accent);text-decoration:none}}
-    nav ul{{list-style:none;display:flex;gap:1.25rem;flex-wrap:wrap}}
-    nav a{{color:var(--muted);text-decoration:none;font-size:.95rem;transition:color .2s}}
-    nav a:hover,nav a:focus{{color:var(--fg);outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}}
-    .breadcrumb{{font-size:.875rem;color:var(--muted);margin-bottom:1.25rem}}
-    .breadcrumb a{{color:var(--accent);text-decoration:none}}
-    .product-header{{margin-bottom:1.5rem}}
-    .badge{{display:inline-block;padding:.25rem .75rem;border-radius:999px;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.75rem}}
-    .badge-recommended{{background:rgba(34,197,94,.15);color:var(--success);border:1px solid var(--success)}}
-    .badge-clinical{{background:rgba(14,165,233,.15);color:var(--accent);border:1px solid var(--accent)}}
-    .badge-preclinical{{background:rgba(217,119,6,.15);color:var(--warning);border:1px solid var(--warning)}}
-    .badge-prescription{{background:rgba(220,38,38,.12);color:var(--danger);border:1px solid var(--danger)}}
-    h1{{font-family:var(--font-serif);font-size:clamp(1.6rem,4vw,2rem);font-weight:700;margin-bottom:.5rem;line-height:1.2}}
-    .price{{font-size:1.25rem;font-weight:700;color:var(--fg);margin-bottom:1rem;font-family:var(--font-mono)}}
-    .card{{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;box-shadow:0 4px 12px rgba(0,0,0,.05);margin:1.25rem 0}}
-    h2{{font-family:var(--font-serif);font-size:1.25rem;font-weight:700;margin:1.25rem 0 .5rem}}
-    h3{{font-family:var(--font-serif);font-size:1.05rem;font-weight:700;margin:1rem 0 .5rem}}
-    p{{color:var(--muted);margin-bottom:.75rem}}
-    ul{{margin-left:1.25rem;color:var(--muted);margin-bottom:.75rem}}
-    li{{margin-bottom:.35rem}}
-    .mono{{font-family:var(--font-mono);font-size:.9rem;color:var(--fg)}}
-    .disclaimer{{background:rgba(220,38,38,.08);border:1px solid var(--danger);border-radius:var(--radius);padding:1.25rem;margin:1.5rem 0}}
-    .disclaimer h3{{color:var(--danger);font-size:1rem;margin-bottom:.5rem}}
-    .disclosure{{background:rgba(14,165,233,.08);border:1px solid var(--accent);border-radius:var(--radius);padding:1.25rem;margin:1.25rem 0}}
-    .disclosure h3{{color:var(--accent);font-size:1rem;margin-bottom:.5rem}}
-    .cta{{display:inline-block;margin-top:.75rem;padding:.875rem 1.5rem;border-radius:var(--radius);background:linear-gradient(90deg,var(--accent),#38bdf8);color:#0f172a;font-weight:700;text-decoration:none}}
-    .cta:hover,.cta:focus{{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.15);outline:2px solid var(--accent);outline-offset:4px}}
-    footer{{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:.875rem}}
-    footer a{{color:var(--accent);text-decoration:none}}
-    @media print{{body{{background:white;color:black}}.cta,header,footer{{display:none}}}}
-  </style>
+  <link rel="stylesheet" href="/_shared/product.css">
 </head>
 <body>
   <div class="container">

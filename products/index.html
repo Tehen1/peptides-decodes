@@ -38,6 +38,18 @@
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:var(--font-sans);background:var(--bg);color:var(--fg);line-height:1.6;min-height:100vh}
     .container{max-width:1100px;margin:0 auto;padding:2rem 1.5rem}
+    body {
+      background:
+        radial-gradient(1200px 800px at 10% -10%, rgba(30,64,175,0.07), transparent 60%),
+        radial-gradient(900px 600px at 90% 10%, rgba(14,165,233,0.07), transparent 55%),
+        linear-gradient(180deg, #f8f6f1 0%, #f3efe6 100%);
+    }
+    .card {
+      background:
+        radial-gradient(600px 400px at 0% 0%, rgba(30,64,175,0.04), transparent 55%),
+        rgba(255,255,255,0.72);
+      backdrop-filter: blur(6px);
+    }
     header{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;gap:1rem;flex-wrap:wrap}
     .logo{font-size:1.5rem;font-weight:800;color:var(--accent);text-decoration:none}
     nav ul{list-style:none;display:flex;gap:1.25rem;flex-wrap:wrap}
