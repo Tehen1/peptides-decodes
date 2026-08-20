@@ -198,6 +198,22 @@ export function createClickHandler(options: ClickHandlerOptions) {
         });
       }
 
+      const baseLocation = product.rc_product_url;
+      const ref = url.searchParams.get("ref");
+      const affiliateRef = ref && ref.trim().length > 0 ? ref.trim() : "PEPTIDESDECODED";
+
+      let redirectUrl = baseLocation;
+      try {
+        const parsed = new URL(baseLocation);
+        if (!parsed.searchParams.has("ref")) {
+          parsed.searchParams.set("ref", affiliateRef);
+        }
+        redirectUrl = parsed.toString();
+      } catch {
+        const separator = baseLocation.includes("?") ? "&" : "?";
+        redirectUrl = `${baseLocation}${separator}ref=${encodeURIComponent(affiliateRef)}`;
+      }
+
       // Logging
       const ip = request.headers.get("CF-Connecting-IP") ?? "0.0.0.0";
       const ua = request.headers.get("User-Agent") ?? "";
@@ -224,7 +240,7 @@ export function createClickHandler(options: ClickHandlerOptions) {
         headers: {
           ...CORS_HEADERS,
           ...DISCLOSURE_HEADER,
-          Location: product.rc_product_url,
+          Location: redirectUrl,
           "Cache-Control": "no-store, no-cache, must-revalidate",
         },
       });
