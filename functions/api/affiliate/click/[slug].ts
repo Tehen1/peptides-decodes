@@ -7,7 +7,7 @@
 // Uses shared canonical click-tracker
 // =====================================================
 
-import { createClickHandler, type Env } from "../../../../_shared/click-tracker";
+import { createClickHandler, type Env } from "../../_shared/click-tracker";
 
 export type { Env };
 
