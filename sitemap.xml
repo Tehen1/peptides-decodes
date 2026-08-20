@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://peptides-decodes.pages.dev/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://peptides-decodes.pages.dev/"/>
@@ -12,13 +12,13 @@
   </url>
   <url>
     <loc>https://peptides-decodes.pages.dev/articles/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://peptides-decodes.pages.dev/articles/peptides-cosmetiques/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -37,6 +37,12 @@
   <url>
     <loc>https://peptides-decodes.pages.dev/articles/peptides-cosmetiques/microneedle-clha-ahp8-egf/</loc>
     <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://peptides-decodes.pages.dev/articles/peptides-cosmetiques/ghk-cu/</loc>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -60,13 +66,7 @@
   </url>
   <url>
     <loc>https://peptides-decodes.pages.dev/articles/glp1-neurologie/</loc>
-    <lastmod>2026-08-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://peptides-decodes.pages.dev/articles/glp1-neurologie/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -77,8 +77,38 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://peptides-decodes.pages.dev/articles/glp1-neurologie/glp1-alzheimer-evoke/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://peptides-decodes.pages.dev/articles/glp1-metabolisme/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://peptides-decodes.pages.dev/articles/glp1-metabolisme/cagrisema-reimagine/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://peptides-decodes.pages.dev/articles/glp1-metabolisme/orforglipron-achieve/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://peptides-decodes.pages.dev/articles/glp1-metabolisme/select-semaglutide-cv/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://peptides-decodes.pages.dev/articles/glp1-metabolisme/glp1-mash-nash/</loc>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -90,13 +120,19 @@
   </url>
   <url>
     <loc>https://peptides-decodes.pages.dev/articles/glp1-glucagon/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://peptides-decodes.pages.dev/articles/glp1-glucagon/survodutide/</loc>
     <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://peptides-decodes.pages.dev/articles/glp1-glucagon/retatrutide-triumph/</loc>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -139,6 +175,18 @@
   <url>
     <loc>https://peptides-decodes.pages.dev/articles/pharmacovigilance/fda-ema-safety-reporting/</loc>
     <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://peptides-decodes.pages.dev/articles/oncologie/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://peptides-decodes.pages.dev/articles/oncologie/pdc-vaccins-peptidiques/</loc>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
