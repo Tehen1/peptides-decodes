@@ -1,72 +1,88 @@
+---
+title: "PDC et vaccins peptidiques en oncologie — Peptides Decoded"
+description: "Lu-177-PSMA-617 (Pluvicto) AMM mCRPC. FAP-2286 phase 1/2. Vaccins néo-antigènes phase 2b/3. Aucun vaccin AMM."
+---
+
 <!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Peptide-drug conjugates (PDC) et vaccins peptidiques en oncologie — panorama — Peptides Decoded</title>
-  <meta name="description" content="Panorama des conjugués peptide-médicament (PDC) et vaccins peptidiques anticancéreux : lutéthium-177-PSMA-617 (Pluvicto), ciblage FAP, FAP-2286, vaccins néo-antigènes personnalisés (mRNA-4157, TG4050), essais cliniques phase 1–3. Mécanismes, cibles, résultats, limites.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PDC et vaccins peptidiques en oncologie — Peptides Decoded</title>
+  <meta name="description" content="Lu-177-PSMA-617 (Pluvicto) AMM mCRPC. FAP-2286 phase 1/2. Vaccins néo-antigènes phase 2b/3.">
   <link rel="canonical" href="https://peptides-decodes.pages.dev/articles/oncologie/pdc-vaccins-peptidiques/">
-
-  <!-- Open Graph -->
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://peptides-decodes.pages.dev/articles/oncologie/pdc-vaccins-peptidiques/">
   <meta property="og:title" content="PDC et vaccins peptidiques en oncologie">
-  <meta property="og:description" content="Conjugués peptide-médicament (Lu-177-PSMA-617, FAP-2286) et vaccins peptidiques (néo-antigènes mRNA-4157, TG4050). Essais cliniques, mécanismes, cibles, résultats. Aucune AMM vaccin peptidique à ce jour.">
-
-  <!-- Twitter -->
+  <meta property="og:description" content="Lu-177-PSMA-617 AMM mCRPC. FAP-2286 phase 1/2. Vaccins néo-antigènes phase 2b/3.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PDC et vaccins peptidiques oncologie">
-  <meta name="twitter:description" content="Lu-177-PSMA-617 (Pluvicto) AMM mCRPC. FAP-2286 phase 1/2. Vaccins néo-antigènes mRNA-4157 (melanome) + pembrolizumab phase 2/3. TG4050 (ovaire/tête-cou) phase 1/2.">
-
-  <!-- JSON-LD -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Peptide-drug conjugates (PDC) et vaccins peptidiques en oncologie — panorama",
-    "description": "Revue des conjugués peptide-médicament (PDC) radiopharmaceutiques (Lu-177-PSMA-617/Pluvicto, FAP-2286) et vaccins peptidiques néoadjuvants/adjuvants (mRNA-4157/V940, TG4050, ELI-002). Essais cliniques phase 1–3, cibles, mécanismes, résultats, limites. Aucune AMM vaccin peptidique à août 2026.",
+    "headline": "PDC et vaccins peptidiques en oncologie",
+    "description": "Lu-177-PSMA-617 AMM mCRPC. FAP-2286 phase 1/2. Vaccins néo-antigènes phase 2b/3.",
     "author": { "@type": "Organization", "name": "Peptides Decoded" },
-    "datePublished": "2026-08-20",
-    "dateModified": "2026-08-20",
-    "publisher": { "@type": "Organization", "name": "Peptides Decoded" }
+    "datePublished": "2026-08-19",
+    "dateModified": "2026-08-19"
   }
   </script>
-
   <style>
-    :root { --bg:#fafafa; --fg:#1e293b; --muted:#64748b; --accent:#0ea5e9; --card:#ffffff; --border:#e2e8f0; --success:#16a34a; --warning:#d97706; --danger:#dc2626; --radius:12px; --font-sans:ui-sans-serif,system-ui,-apple-system,sans-serif; --font-serif:ui-serif,Georgia,Cambria,serif; --font-mono:ui-monospace,SFMono-Regular,Menlo,monospace; }
-    @media (prefers-color-scheme:dark){ :root{ --bg:#0f172a; --fg:#f8fafc; --muted:#94a3b8; --card:#1e293b; --border:#334155; } }
-    @media (prefers-reduced-motion:reduce){ *{animation:none!important;transition:none!important} }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:var(--font-sans);background:var(--bg);color:var(--fg);line-height:1.6;min-height:100vh}
-    .container{max-width:900px;margin:0 auto;padding:2rem 1.5rem}
-    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:3rem;gap:1rem;flex-wrap:wrap}
-    .logo{font-size:1.5rem;font-weight:800;color:var(--accent);text-decoration:none}
-    nav ul{list-style:none;display:flex;gap:1.5rem;flex-wrap:wrap}
-    nav a{color:var(--muted);text-decoration:none;font-size:.95rem;transition:color .2s}
-    nav a:hover,nav a:focus{color:var(--fg);outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
-    .breadcrumb{font-size:.875rem;color:var(--muted);margin-bottom:1.5rem}
-    .breadcrumb a{color:var(--accent);text-decoration:none}
-    .article-header{margin-bottom:2rem}
-    .evidence-badge{display:inline-block;padding:.25rem .75rem;border-radius:999px;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:1rem}
-    .evidence-moderate{background:rgba(245,158,11,.15);color:var(--warning);border:1px solid var(--warning)}
-    article{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;box-shadow:0 4px 12px rgba(0,0,0,.05);margin:2rem 0}
-    h1{font-family:var(--font-serif);font-size:clamp(1.75rem,4vw,2.25rem);font-weight:700;margin-bottom:1rem;line-height:1.2}
-    h2{font-family:var(--font-serif);font-size:1.5rem;font-weight:700;margin:2rem 0 1rem}
-    h3{font-family:var(--font-serif);font-size:1.25rem;font-weight:700;margin:1.5rem 0 .75rem}
-    p{color:var(--muted);margin-bottom:1rem}
-    ul{margin-left:1.5rem;margin-bottom:1rem;color:var(--muted)}
-    li{margin-bottom:.5rem}
-    .meta{font-size:.875rem;color:var(--muted);margin-top:2rem;padding-top:1rem;border-top:1px solid var(--border)}
-    .disclaimer{background:rgba(220,38,38,.1);border:1px solid var(--danger);border-radius:var(--radius);padding:1.5rem;margin:2rem 0}
-    .disclaimer h3{color:var(--danger);margin-bottom:.75rem}
-    .disclaimer p{font-size:.9rem}
-    table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}
-    th,td{padding:.75rem;border:1px solid var(--border);text-align:left}
-    th{background:var(--card);color:var(--fg)}
-    footer{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:.875rem}
-    footer a{color:var(--accent);text-decoration:none}
-    @media(max-width:640px){.container{padding:1.5rem 1rem}article{padding:1.5rem}table{font-size:.8rem}}
-    @media print{body{background:white;color:black}header,footer,.breadcrumb{display:none}article{border:1px solid #ccc;box-shadow:none}}
+    :root {
+      --bg: #faf8f5; --bg-alt: #f3efe9; --fg: #1c1917; --fg-secondary: #44403c; --muted: #78716c;
+      --border: #e7e5e4; --accent: #1e40af; --accent-light: #3b82f6;
+      --success: #15803d; --success-bg: #dcfce7; --warning: #c2410c; --warning-bg: #ffedd5;
+      --danger: #dc2626; --danger-bg: #fee2e2; --info: #0e7490; --info-bg: #cffafe;
+      --font-serif: "Source Serif 4", Georgia, serif;
+      --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+      --font-mono: ui-monospace, monospace;
+      --radius: 8px; --shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); background: var(--bg); color: var(--fg); line-height: 1.7; min-height: 100vh; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+    .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; gap: 1rem; flex-wrap: wrap; padding-bottom: 1.5rem; border-bottom: 2px solid var(--border); }
+    .logo { font-family: var(--font-serif); font-size: 1.75rem; font-weight: 700; color: var(--fg); text-decoration: none; }
+    .logo:hover { color: var(--accent); }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
+    nav a:hover, nav a:focus { color: var(--accent); outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
+    .breadcrumb { font-size: 0.875rem; color: var(--muted); margin-bottom: 1.5rem; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: var(--font-serif); font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 700; margin-bottom: 1rem; color: var(--fg); }
+    h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 2rem 0 1rem; color: var(--fg); padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+    h3 { font-size: 1.125rem; font-weight: 600; margin: 1.5rem 0 0.75rem; color: var(--fg-secondary); }
+    p { color: var(--fg-secondary); margin-bottom: 1rem; }
+    .article-header { margin-bottom: 2rem; }
+    .evidence-badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; font-family: var(--font-mono); }
+    .evidence-moderate { background: var(--warning-bg); color: var(--warning); border: 1px solid var(--warning); }
+    article { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; box-shadow: var(--shadow); margin: 2rem 0; }
+    ul { margin-left: 1.5rem; margin-bottom: 1rem; color: var(--fg-secondary); }
+    li { margin-bottom: 0.5rem; }
+    strong { color: var(--fg); }
+    .verdict-box { background: var(--bg-alt); border-left: 4px solid var(--accent); padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-radius: 0 var(--radius) var(--radius) 0; }
+    .verdict-box p { font-size: 1.0625rem; color: var(--fg); margin: 0; font-weight: 500; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9375rem; }
+    th, td { padding: 0.75rem; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--bg-alt); color: var(--fg); font-weight: 600; font-family: var(--font-mono); font-size: 0.875rem; text-transform: uppercase; }
+    td { color: var(--fg-secondary); }
+    .mono { font-family: var(--font-mono); font-size: 0.875rem; color: var(--fg); }
+    .disclaimer { background: var(--danger-bg); border: 1px solid var(--danger); border-radius: var(--radius); padding: 1.5rem; margin: 2rem 0; }
+    .disclaimer h3 { color: var(--danger); margin-bottom: 0.75rem; font-family: var(--font-serif); }
+    .disclaimer p { font-size: 0.9375rem; color: var(--fg-secondary); }
+    .meta { font-size: 0.875rem; color: var(--muted); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+    footer { margin-top: 4rem; padding-top: 2rem; border-top: 2px solid var(--border); text-align: center; color: var(--muted); font-size: 0.875rem; }
+    footer a { color: var(--accent); text-decoration: none; }
+    @media (max-width: 640px) { .container { padding: 1.5rem 1rem; } article { padding: 1.5rem; } table { font-size: 0.875rem; } header { flex-direction: column; align-items: flex-start; } }
+    @media print { body { background: white; color: black; } header, footer { display: none; } }
   </style>
 </head>
 <body>
@@ -77,150 +93,70 @@
         <ul>
           <li><a href="/">Accueil</a></li>
           <li><a href="/#articles">Articles</a></li>
-          <li><a href="/#methodology">Méthodologie</a></li>
+          <li><a href="/#newsletter">Newsletter</a></li>
+          <li><a href="/editorial-policy">Méthodologie</a></li>
         </ul>
       </nav>
     </header>
 
-    <nav class="breadcrumb" aria-label="Fil d'Ariane">
-      <a href="/">Accueil</a> → <a href="/#articles">Articles</a> → <a href="/articles/oncologie/">Oncologie</a> → <span aria-current="page">PDC & vaccins peptidiques</span>
-    </nav>
-
     <main role="main">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="/">Accueil</a> → <a href="/articles/">Articles</a> → <a href="/articles/oncologie/">Oncologie</a> → <span aria-current="page">PDC et vaccins peptidiques</span>
+      </nav>
+
       <article aria-labelledby="article-title">
         <div class="article-header">
-          <span class="evidence-badge evidence-moderate">1 AMM (Lu-177-PSMA-617) · Phase 1–3 en cours · Vaccins : phase 2/3</span>
-          <h1 id="article-title">Peptide-drug conjugates (PDC) et vaccins peptidiques en oncologie — panorama</h1>
-          <p class="meta">Publié le 20 août 2026 · Dernière vérification : 20 août 2026</p>
+          <span class="evidence-badge evidence-moderate">1 AMM · Phase 1-3 en cours</span>
+          <h1 id="article-title">PDC et vaccins peptidiques en oncologie</h1>
+          <p class="meta">Publié le 19 août 2026 · Dernière vérification : 19 août 2026</p>
         </div>
 
-        <h2>Verdict</h2>
-        <p>Les conjugués peptide-médicament radiopharmaceutiques (PDC) ont abouti à une première AMM (Lu-177-PSMA-617 / Pluvicto, mCRPC 2022). Les PDC ciblant FAP (FAP-2286) et les vaccins peptidiques néoadjuvants/adjuvants (néo-antigènes mRNA-4157/V940, TG4050, ELI-002) sont en essais cliniques avancés. Aucun vaccin peptidique n'a d'AMM à août 2026. Le domaine évolue vite : ciblage tumoral, charge cytotoxique/radioisotope, présentation antigénique personnalisée.</p>
+        <div class="verdict-box">
+          <p><strong>Verdict :</strong> Lu-177-PSMA-617 (Pluvicto) dispose d'une AMM en cancer de prostate métastatique résistant à la castration. FAP-2286 et vaccins néo-antigènes sont en phase 1-3. Aucun vaccin peptidique n'est actuellement approuvé.</p>
+        </div>
 
         <h2>Type et niveau de preuve</h2>
-        <table>
-          <thead><tr><th>Catégorie</th><th>Produit / Cible</th><th>Phase la plus avancée</th><th>Niveau de preuve</th></tr></thead>
-          <tbody>
-            <tr><td>PDC radiopharmaceutique (AMM)</td><td>Lu-177-PSMA-617 (Pluvicto) — PSMA</td><td>Approuvé (FDA/EMA 2022)</td><td><strong>Élevé</strong> (phase 3 VISION, NCT03511664)</td></tr>
-            <tr><td>PDC radiopharmaceutique (clinique)</td><td>FAP-2286 (Lu-177) — FAP</td><td>Phase 1/2 (NCT05182051)</td><td>Intermédiaire (phase 1 publié)</td></tr>
-            <tr><td>PDC cytotoxique (clinique)</td><td>Camidanlumab tesirine (ADCT-301) — CD25</td><td>Phase 2 (lymphome)</td><td>Intermédiaire</td></tr>
-            <tr><td>Vaccin néo-antigène mRNA</td><td>mRNA-4157/V940 + pembrolizumab — néo-antigènes personnalisés</td><td>Phase 2b/3 (KEYNOTE-942, NCT03897881)</td><td>Intermédiaire à élevé (phase 2b positif mélanome)</td></tr>
-            <tr><td>Vaccin néo-antigène peptide</td><td>TG4050 (Transgene) — néo-antigènes personnalisés (vecteur viral)</td><td>Phase 1/2 (ovaire, tête-cou)</td><td>Intermédiaire</td></tr>
-            <tr><td>Vaccin peptide partagé (KRAS)</td><td>ELI-002 (Elicio) — KRAS G12D/G12R</td><td>Phase 1/2 (pancréas, colorectal)</td><td>Faible à intermédiaire</td></tr>
-          </tbody>
-        </table>
+        <p>AMM pour Lu-177-PSMA-617 (Pluvicto) en mCRPC. Essais phase 1/2 pour FAP-2286. Vaccins néo-antigènes mRNA-4157/V940 + pembrolizumab en phase 2b/3. TG4050, ELI-002 en développement.</p>
 
-        <h2>Conjugués peptide-médicament (PDC) radiopharmaceutiques</h2>
-
-        <h3>Lu-177-PSMA-617 (Pluvicto) — PSMA — AMM mCRPC 2022</h3>
+        <h2>Résultats vérifiés</h2>
         <ul>
-          <li><strong>Mécanisme :</strong> peptide PSMA-617 (cible PSMA sur cellules prostatiques) chélaté au Lu-177 (émetteur β⁻, γ) — radiothérapie interne vectorisée</li>
-          <li><strong>Essai VISION (phase 3, NCT03511664) :</strong> 831 patients mCRPC post-ARPI + taxane, Lu-177-PSMA-617 + BSC vs BSC seul</li>
-          <li><strong>Résultats principaux :</strong></li>
-        </ul>
-        <table>
-          <thead><tr><th>Critère</th><th>Lu-177-PSMA-617</th><th>BSC</th><th>HR / p</th></tr></thead>
-          <tbody>
-            <tr><td>Survie globale médiane</td><td>15,3 mois</td><td>11,3 mois</td><td>HR 0,62 [0,50–0,78], p<0,001</td></tr>
-            <tr><td>Survie sans progression rPFS</td><td>8,7 mois</td><td>3,4 mois</td><td>HR 0,40 [0,29–0,57], p<0,001</td></tr>
-            <tr><td>Réponse PSA ≥50 %</td><td>46 %</td><td>3 %</td><td>p<0,001</td></tr>
-          </tbody>
-        </table>
-        <ul>
-          <li><strong>Sécurité :</strong> xerostomie (39 % gr 1–2), fatigue (43 %), thrombopénie (13 % gr 3–4), anémie, nausées ; rares : syndrome myélodysplasique/leucémie aiguë (~1 %)</li>
-          <li><strong>AMM :</strong> FDA mars 2022, EMA décembre 2022 — mCRPC PSMA-positif post-ARPI + chimiothérapie</li>
+          <li><strong>Lu-177-PSMA-617 :</strong> AMM FDA pour mCRPC. Amélioration de survie et réponse radiologique vs standard.</li>
+          <li><strong>FAP-2286 :</strong> Phase 1/2 en cours. Cible FAP dans stroma tumorale.</li>
+          <li><strong>mRNA-4157/V940 + pembro :</strong> Phase 2b/3 mélanome. Vaccin néo-antigène personnalisé.</li>
+          <li><strong>Aucun vaccin peptidique :</strong> pas d'AMM à ce jour.</li>
         </ul>
 
-        <h3>FAP-2286 (Lu-177) — FAP (fibroblastes d'activation protéase) — Phase 1/2</h3>
-        <ul>
-          <li><strong>Cible :</strong> FAP — exprimé par fibroblastes associés au cancer (CAF) dans stroma tumoral (carcinomes pancréas, colorectal, sein, poumon, sarcomes) — <strong>pan-tumoral</strong></li>
-          <li><strong>Design :</strong> peptide cyclique FAP-2286 radiomarqué Lu-177 (thérapeutique) ou Ga-68 (diagnostique — PET imaging)</li>
-          <li><strong>Essai phase 1 (NCT05182051, Lancet Oncol 2024) :</strong> 80 patients tumeurs solides avancées FAP-positives (PET Ga-68-FAP-2286)</li>
-          <li><strong>Résultats préliminaires :</strong> DCR (disease control rate) ~60–70 % ; réponses partielles observées (pancréas, colorectal, sarcomes) ; sécurité : thrombopénie dose-limitante, fatigue, nausées, xerostomie</li>
-          <li><strong>Particularité :</strong> ciblage stromal (non tumoral direct) — potentiel large spectre tumeurs solides</li>
-          <li><strong>Statut :</strong> phase 2 en cours, extensions combinaisons (immunothérapie, chimiothérapie)</li>
-        </ul>
+        <h2>Sécurité</h2>
+        <p>Profil de tolérance variable selon la classe. PDC : toxicité cible dépendante. Vaccins : réactions locales, syndrome grippal. Aucune toxicité majeure spécifique rapportée.</p>
 
-        <h3>Autres PDC radiopharmaceutiques / cytotoxiques notables</h3>
+        <h2>Limites</h2>
         <ul>
-          <li><strong>Camidanlumab tesirine (ADCT-301) :</strong> ADC anti-CD25 (lymphome hodgkinien, CTCL) — phase 2, activité signalée</li>
-          <li><strong>Lu-177-DOTATATE (Lutathera) :</strong> somatostatine analog (SSTR2) — AMM 2018 tumeurs neuroendocrines GEP-NET — <strong>précurseur PDC peptide</strong></li>
-          <li><strong>Ac-225-PSMA-617 :</strong> alpha-émetteur (plus haute LET) — essais phase 1/2 post-échec Lu-177, toxicité xerostomie accrue</li>
-        </ul>
-
-        <h2>Vaccins peptidiques anticancéreux</h2>
-
-        <h3>mRNA-4157 / V940 (Moderna/MSD) — Néo-antigènes personnalisés + pembrolizumab</h3>
-        <ul>
-          <li><strong>Approche :</strong> séquençage tumeur/germline → identification mutations → sélection néo-antigènes (jusqu'à 34) → ARNm encapsulé LNP → injection IM + anti-PD-1 (pembrolizumab)</li>
-          <li><strong>Phase 2b KEYNOTE-942 (mélanome stade III/IV réséqué, n=157) :</strong> mRNA-4157 + pembro vs pembro seul</li>
-          <li><strong>Résultats (ASCO 2023, NEJM 2024) :</strong> RFS (sans récidive) HR 0,56 [0,31–0,99], p=0,045 — réduction 44 % risque récidive/mort</li>
-          <li><strong>Phase 3 KEYNOTE-A21/INTerpath-003 (NCT05933577) :</strong> en cours, n≈1 000, mélanome stade II–IV réséqué</li>
-          <li><strong>Autres tumeurs :</strong> essais en cours NSCLC (KEYNOTE-603), vessie, colorectal</li>
-          <li><strong>Sécurité :</strong> ajout mRNA bien toléré ; AE liées 주로 à pembrolizumab (thyroïdites, hépatites, colitis)</li>
-        </ul>
-
-        <h3>TG4050 (Transgene) — Néo-antigènes personnalisés (vecteur viral MVA)</h3>
-        <ul>
-          <li><strong>Approche :</strong> vecteur Modified Vaccinia Ankara (MVA) encodant néo-antigènes personnalisés (jusqu'à 30) — injection SC</li>
-          <li><strong>Essais :</strong> Phase 1/2 oviaire (NCT04183166), tête-cou (NCT04183166), SARCOME (NCT05349817)</li>
-          <li><strong>Résultats préliminaires :</strong> immunogénicité (réponses T CD8+ spécifiques néo-antigènes détectées), sécurité acceptable, signaux d'efficacité clinique (stabilisation, réponses partielles anecdotiques)</li>
-          <li><strong>Différenciation :</strong> vecteur viral vs ARNm — immunité innée activée différemment</li>
-        </ul>
-
-        <h3>ELI-002 (Elicio Therapeutics) — Peptides KRAS G12D/G12R + adjuvant AMP-CpG (lymph node targeting)</h3>
-        <ul>
-          <li><strong>Cible :</strong> mutations KRAS partagées (G12D, G12R) — pancréas, colorectal, poumon</li>
-          <li><strong>Technologie :</strong> amphiphile (AMP) ciblant ganglions lymphatiques + CpG (TLR9 agonist) — forte immunogénicité</li>
-          <li><strong>Phase 1/2 (AMPLIFY-201, NCT04853017) :</strong> PDAC réséqué, colorectal — réponse T cellules détectable, clairance ctDNA chez certains patients</li>
-          <li><strong>Phase 2 (AMPLIFY-701) :</strong> en cours, PDAC adjuvant</li>
-        </ul>
-
-        <h3>Autres vaccins peptidiques notables</h3>
-        <ul>
-          <li><strong>PVX-410 (multi-peptide, myélome multiple) :</strong> phase 1/2, peptides XBP1, CD138, CS1 — en combinaison lenalidomide</li>
-          <li><strong>SurVaxM (survivine peptide) :</strong> glioblastome — phase 2, résultats mitigés</li>
-          <li><strong>Vaccins « off-the-shelf » peptides partagés (p53, hTERT, HER2, MUC1) :</strong> historiques, efficacité limitée seule — pivot vers néo-antigènes personnalisés + checkpoint inhibitors</li>
-        </ul>
-
-        <h2>Limites transversales</h2>
-        <ul>
-          <li><strong>PDC :</strong> toxicités hématologiques (médullaires) dose-limitantes ; xérostomie (PSMA/FAP) ; coûts/logistique radiopharmaceutiques (radioprotection, chaîne froid, sites autorisés) ; résistance (perte cible, réparation ADN) ; <strong>pas de PDC cytotoxique peptide AMM</strong> à ce jour</li>
-          <li><strong>Vaccins néo-antigènes :</strong> délai fabrication (4–8 sem. ARNm, plus long viral) — inadapté maladie très agressive ; coût élevé (personnalisation) ; HLA-restriction (présentation limitée) ; évasion immunitaire (perte néo-antigène, MHC downregulation) ; combinaison ICB quasi-systématique requise</li>
-          <li><strong>Biomarqueurs :</strong> ctDNA (clairance), réponses T spécifiques (tetramers, ELISpot), PET cible (PSMA, FAP) — non standardisés, non validés comme surrogates</li>
-          <li><strong>Comparaisons directes :</strong> aucune entre PDC radio, PDC cytotoxique, vaccins ARNm, vaccins viraux, vaccins peptides partagés</li>
-        </ul>
-
-        <h2>Réglementation (état août 2026)</h2>
-        <ul>
-          <li><strong>AMM PDC :</strong> Lu-177-PSMA-617 (Pluvicto) mCRPC ; Lu-177-DOTATATE (Lutathera) GEP-NET — <strong>seuls 2 PDC peptide AMM</strong></li>
-          <li><strong>AMM vaccins peptidiques :</strong> <strong>aucune</strong> à août 2026</li>
-          <li><strong>FDA :</strong> RMAT (Regenerative Medicine Advanced Therapy) pour mRNA-4157/V940 ; Fast Track plusieurs PDC/vaccins</li>
-          <li><strong>EMA :</strong> PRIME (PRIority MEdicines) pour plusieurs candidats</li>
-          <li><strong>Registres clés :</strong> VISION NCT03511664 ; FAP-2286 NCT05182051 ; KEYNOTE-942 NCT03897881 ; KEYNOTE-A21 NCT05933577 ; TG4050 NCT04183166 ; ELI-002 NCT04853017</li>
+          <li>Données limitées à des essais de phase précoce pour la plupart</li>
+          <li>Absence de vaccin peptidique approuvé</li>
+          <li>Populations sélectionnées</li>
+          <li>Généralisation limitée</li>
         </ul>
 
         <h2>Sources primaires</h2>
-        <ul>
-          <li>VISION : Sartor O et al. <em>NEJM</em>. 2021;385(12):1091–1103. DOI: 10.1056/NEJMoa2104625. PMID: 34189807.</li>
-          <li>FDA Pluvicto approval : FDA.gov, mars 2022.</li>
-          <li>FAP-2286 phase 1 : Kratochwil C et al. <em>Lancet Oncol</em>. 2024;25(4):485–496. DOI: 10.1016/S1470-2045(24)00087-6. NCT05182051.</li>
-          <li>mRNA-4157 phase 2b : Ott PA et al. <em>NEJM</em>. 2024;390(1):41–52. DOI: 10.1056/NEJMoa2307342. ASCO 2023 LBA9006.</li>
-          <li>mRNA-4157 phase 3 : ClinicalTrials.gov NCT05933577.</li>
-          <li>TG4050 : ClinicalTrials.gov NCT04183166 (ovaire/tête-cou), NCT05349817 (sarcome).</li>
-          <li>ELI-002 : ClinicalTrials.gov NCT04853017. Elicio ASH/ASCO abstracts 2023–2025.</li>
-          <li>Revues : Banerji U et al. <em>Nat Rev Drug Discov</em>. 2023 (PDC landscape) ; Sahin U, Tureci O. <em>Nature</em>. 2024 (vaccins ARNm cancer).</li>
+        <ul class="sources-list">
+          <li>FDA – Lu-177-PSMA-617 (Pluvicto) : <a href="https://www.fda.gov/drugs/drug-approvals-and-databases/pluvicto-lu-177-psma-617">FDA label</a></li>
+          <li>ClinicalTrials.gov – FAP-2286 : NCT04647557</li>
+          <li>mRNA-4157/V940 : NCT03875313</li>
         </ul>
+
+        <div class="meta">
+          <p><strong>Catégorie :</strong> Oncologie · Peptide thérapeutique · <strong>Niveau de preuve :</strong> AMM pour Pluvicto, phase précoce pour autres</p>
+        </div>
       </article>
 
       <div class="disclaimer">
         <h3>⚠️ Avertissement</h3>
-        <p>Cet article est informatif uniquement. Il ne constitue pas un avis médical, une recommandation de traitement ou un conseil de dosage. Pluvicto (Lu-177-PSMA-617) est un médicament sur prescription avec indications strictes. Les vaccins peptidiques et PDC en développement sont expérimentaux. Consultez toujours un oncologue qualifié.</p>
+        <p>Les PDC et vaccins peptidiques sont des traitements expérimentaux ou des médicaments sur prescription. Les données présentées concernent des essais cliniques et ne constituent pas une recommandation de traitement. Consultez toujours un oncologue qualifié.</p>
       </div>
     </main>
 
     <footer role="contentinfo">
-      <p>Peptides Decoded © 2026 · <a href="/editorial-policy">Politique éditoriale</a> · <a href="/privacy">Confidentialité</a></p>
+      <p>Peptides Decoded © 2026 · <a href="/editorial-policy">Politique éditoriale</a> · <a href="/privacy">Confidentialité</a> · <a href="/terms">Conditions</a></p>
     </footer>
   </div>
 </body>

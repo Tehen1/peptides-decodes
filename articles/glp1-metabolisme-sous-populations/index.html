@@ -1,51 +1,88 @@
+---
+title: "GLP-1 sous-populations (T1D, exercice, mode de vie) — Peptides Decoded"
+description: "Essais en cours : T1D (NCT06411210), mode de vie (NCT07057310), exercice (NCT07091500). Aucun résultat publié."
+---
+
 <!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>GLP-1 agonistes dans l'obésité et le métabolisme (sous-populations) — Peptides Decoded</title>
-  <meta name="description" content="Essais en cours : T1D + obésité (NCT06411210), mode de vie + GLP-1 (NCT07057310), composition corporelle + exercice (NCT07091500). Aucun résultat publié.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GLP-1 sous-populations — Peptides Decoded</title>
+  <meta name="description" content="Essais en cours : T1D (NCT06411210), mode de vie (NCT07057310), exercice (NCT07091500).">
   <link rel="canonical" href="https://peptides-decodes.pages.dev/articles/glp1-metabolisme-sous-populations/">
-
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://peptides-decodes.pages.dev/articles/glp1-metabolisme-sous-populations/">
+  <meta property="og:title" content="GLP-1 sous-populations (T1D, exercice, mode de vie)">
+  <meta property="og:description" content="Essais en cours : T1D, mode de vie, exercice. Aucun résultat publié.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "GLP-1 sous-populations (T1D, exercice, mode de vie)",
+    "description": "Essais en cours : T1D, mode de vie, exercice.",
+    "author": { "@type": "Organization", "name": "Peptides Decoded" },
+    "datePublished": "2026-08-19",
+    "dateModified": "2026-08-19"
+  }
+  </script>
   <style>
     :root {
-      --bg: #0f172a; --fg: #f8fafc; --muted: #94a3b8;
-      --accent: #38bdf8; --card-bg: #1e293b; --border: #334155;
-      --success: #22c55e; --warning: #f59e0b; --danger: #ef4444;
-      --radius: 12px; --shadow: 0 10px 30px rgba(0,0,0,0.4);
-      --font-sans: ui-sans-serif, system-ui, -apple-system, sans-serif;
+      --bg: #faf8f5; --bg-alt: #f3efe9; --fg: #1c1917; --fg-secondary: #44403c; --muted: #78716c;
+      --border: #e7e5e4; --accent: #1e40af; --accent-light: #3b82f6;
+      --success: #15803d; --success-bg: #dcfce7; --warning: #c2410c; --warning-bg: #ffedd5;
+      --danger: #dc2626; --danger-bg: #fee2e2; --info: #0e7490; --info-bg: #cffafe;
+      --font-serif: "Source Serif 4", Georgia, serif;
+      --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+      --font-mono: ui-monospace, monospace;
+      --radius: 8px; --shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: var(--font-sans); background: linear-gradient(135deg, var(--bg), #020617 60%); color: var(--fg); line-height: 1.6; min-height: 100vh; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); background: var(--bg); color: var(--fg); line-height: 1.7; min-height: 100vh; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
     .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
-    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; gap: 1rem; flex-wrap: wrap; }
-    .logo { font-size: 1.5rem; font-weight: 800; background: linear-gradient(90deg, var(--accent), #22d3ee); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-decoration: none; color: var(--accent); }
+    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; gap: 1rem; flex-wrap: wrap; padding-bottom: 1.5rem; border-bottom: 2px solid var(--border); }
+    .logo { font-family: var(--font-serif); font-size: 1.75rem; font-weight: 700; color: var(--fg); text-decoration: none; }
+    .logo:hover { color: var(--accent); }
     nav ul { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; }
-    nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
-    nav a:hover, nav a:focus { color: var(--fg); outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
+    nav a:hover, nav a:focus { color: var(--accent); outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
     .breadcrumb { font-size: 0.875rem; color: var(--muted); margin-bottom: 1.5rem; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: var(--font-serif); font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 700; margin-bottom: 1rem; color: var(--fg); }
+    h2 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin: 2rem 0 1rem; color: var(--fg); padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+    h3 { font-size: 1.125rem; font-weight: 600; margin: 1.5rem 0 0.75rem; color: var(--fg-secondary); }
+    p { color: var(--fg-secondary); margin-bottom: 1rem; }
     .article-header { margin-bottom: 2rem; }
-    .evidence-badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
-    .evidence-moderate { background: rgba(245, 158, 11, 0.15); color: var(--warning); border: 1px solid var(--warning); }
-    article { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; box-shadow: var(--shadow); margin: 2rem 0; }
-    h1 { font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 800; margin-bottom: 1rem; line-height: 1.2; }
-    h2 { font-size: 1.5rem; font-weight: 700; margin: 2rem 0 1rem; color: var(--fg); }
-    h3 { font-size: 1.25rem; font-weight: 700; margin: 1.5rem 0 0.75rem; color: var(--fg); }
-    p { color: var(--muted); margin-bottom: 1rem; }
-    ul { margin-left: 1.5rem; margin-bottom: 1rem; color: var(--muted); }
+    .evidence-badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; font-family: var(--font-mono); }
+    .evidence-low { background: var(--danger-bg); color: var(--danger); border: 1px solid var(--danger); }
+    article { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; box-shadow: var(--shadow); margin: 2rem 0; }
+    ul { margin-left: 1.5rem; margin-bottom: 1rem; color: var(--fg-secondary); }
     li { margin-bottom: 0.5rem; }
+    strong { color: var(--fg); }
+    .verdict-box { background: var(--bg-alt); border-left: 4px solid var(--accent); padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-radius: 0 var(--radius) var(--radius) 0; }
+    .verdict-box p { font-size: 1.0625rem; color: var(--fg); margin: 0; font-weight: 500; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9375rem; }
+    th, td { padding: 0.75rem; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--bg-alt); color: var(--fg); font-weight: 600; font-family: var(--font-mono); font-size: 0.875rem; text-transform: uppercase; }
+    td { color: var(--fg-secondary); }
+    .mono { font-family: var(--font-mono); font-size: 0.875rem; color: var(--fg); }
+    .disclaimer { background: var(--danger-bg); border: 1px solid var(--danger); border-radius: var(--radius); padding: 1.5rem; margin: 2rem 0; }
+    .disclaimer h3 { color: var(--danger); margin-bottom: 0.75rem; font-family: var(--font-serif); }
+    .disclaimer p { font-size: 0.9375rem; color: var(--fg-secondary); }
     .meta { font-size: 0.875rem; color: var(--muted); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); }
-    .disclaimer { background: rgba(239, 68, 68, 0.1); border: 1px solid var(--danger); border-radius: var(--radius); padding: 1.5rem; margin: 2rem 0; }
-    .disclaimer h3 { color: var(--danger); margin-bottom: 0.75rem; }
-    .disclaimer p { font-size: 0.9rem; }
-    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
-    th, td { padding: 0.75rem; border: 1px solid var(--border); text-align: left; }
-    th { background: var(--card-bg); color: var(--fg); }
-    footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.875rem; }
+    footer { margin-top: 4rem; padding-top: 2rem; border-top: 2px solid var(--border); text-align: center; color: var(--muted); font-size: 0.875rem; }
     footer a { color: var(--accent); text-decoration: none; }
-    @media (max-width: 640px) { .container { padding: 1.5rem 1rem; } article { padding: 1.5rem; } table { font-size: 0.8rem; } }
-    @media print { body { background: white; color: black; } header, footer, .breadcrumb { display: none; } article { border: 1px solid #ccc; box-shadow: none; } }
+    @media (max-width: 640px) { .container { padding: 1.5rem 1rem; } article { padding: 1.5rem; } table { font-size: 0.875rem; } header { flex-direction: column; align-items: flex-start; } }
+    @media print { body { background: white; color: black; } header, footer { display: none; } }
   </style>
 </head>
 <body>
@@ -56,93 +93,69 @@
         <ul>
           <li><a href="/">Accueil</a></li>
           <li><a href="/#articles">Articles</a></li>
-          <li><a href="/#methodology">Méthodologie</a></li>
+          <li><a href="/#newsletter">Newsletter</a></li>
+          <li><a href="/editorial-policy">Méthodologie</a></li>
         </ul>
       </nav>
     </header>
 
-    <nav class="breadcrumb" aria-label="Fil d'Ariane">
-      <a href="/">Accueil</a> → <a href="/#articles">Articles</a> → <a href="/articles/glp1-metabolisme/">GLP-1 Métabolisme</a> → <span aria-current="page">Sous-populations</span>
-    </nav>
-
     <main role="main">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="/">Accueil</a> → <a href="/articles/">Articles</a> → <a href="/articles/glp1-perte-de-poids/">GLP-1</a> → <span aria-current="page">Sous-populations</span>
+      </nav>
+
       <article aria-labelledby="article-title">
         <div class="article-header">
-          <span class="evidence-badge evidence-moderate">Essais en cours · Intermédiaire</span>
-          <h1 id="article-title">Agonistes du récepteur GLP‑1 chez des personnes obèses non diabétiques ou situations particulières</h1>
+          <span class="evidence-badge evidence-low">Essais en cours</span>
+          <h1 id="article-title">GLP-1 agonistes dans l'obésité et le métabolisme (sous-populations)</h1>
           <p class="meta">Publié le 19 août 2026 · Dernière vérification : 19 août 2026</p>
         </div>
 
-        <h2>Verdict</h2>
-        <p>Les agonistes GLP‑1 induisent une perte de poids substantielle et améliorent des marqueurs cardiométaboliques, mais les données spécifiques à des sous‑populations (T1D, personnes âgées, interaction avec l'exercice) restent en cours de collecte et ne permettent pas de conclure sur des bénéfices à long terme au‑delà du poids.</p>
+        <div class="verdict-box">
+          <p><strong>Verdict :</strong> Les agonistes GLP-1 induisent une perte de poids substantielle, mais les données spécifiques à des sous-populations (T1D, personnes âgées, interaction avec l'exercice) restent en cours de collecte et ne permettent pas de conclure sur des bénéfices à long terme au-delà du poids.</p>
+        </div>
 
         <h2>Type et niveau de preuve</h2>
-        <table>
-          <thead>
-            <tr><th>Élément</th><th>Évaluation</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Type d'étude</td><td>Essais cliniques randomisés, contrôlés, en cours ou récemment initiés, critères intermédiaires (composition corporelle, biomarqueurs, fonction physique)</td></tr>
-            <tr><td>Population</td><td>Sous-populations : T1D + obésité, personnes âgées, interaction exercice</td></tr>
-            <tr><td>Comparateur</td><td>Placebo, intervention mode de vie, entraînement physique</td></tr>
-            <tr><td>Durée</td><td>52 semaines à 2 ans</td></tr>
-            <tr><td>Niveau de preuve</td><td>Intermédiaire (données robustes perte de poids population générale, résultats manquants/partiels pour sous-indications)</td></tr>
-            <tr><td>Applicabilité</td><td>Populations sélectionnées, centres universitaires</td></tr>
-          </tbody>
-        </table>
+        <p>Essais cliniques randomisés, contrôlés, en cours ou récemment initiés. Critères intermédiaires : composition corporelle, biomarqueurs, fonction physique.</p>
 
-        <h2>Résultats vérifiés (essais en cours — aucun résultat publié)</h2>
-
-        <h3>NCT06411210 — Semaglutide chez jeunes adultes T1D et obésité</h3>
+        <h2>Résultats vérifiés</h2>
         <ul>
-          <li>Semaglutide 2,4 mg hebdomadaire vs placebo</li>
-          <li>Objectif principal : distribution graisse abdominale et facteurs risque cardiométabolique sur 52 semaines</li>
-          <li>Statut : en cours, pas de résultats publiés</li>
+          <li><strong>NCT06411210 :</strong> jeunes adultes T1D + obésité, semaglutide 2,4 mg vs placebo, 52 semaines — en cours</li>
+          <li><strong>NCT07057310 :</strong> semaglutide/tirzepatide + mode de vie, fonction physique, biomarqueurs du vieillissement — en cours</li>
+          <li><strong>NCT07091500 :</strong> composition corporelle, fonction musculaire, force avec/sans entraînement, impact arrêt traitement — 2 ans, en cours</li>
         </ul>
 
-        <h3>NCT07057310 — Semaglutide/tirzepatide + intervention mode de vie</h3>
-        <ul>
-          <li>Adultes obèses, quantification impact sur fonction physique, biomarqueurs vieillissement, santé vasculaire</li>
-          <li>Statut : en cours, résultats non disponibles</li>
-        </ul>
-
-        <h3>NCT07091500 — GLP-1 RA + entraînement physique sur 2 ans</h3>
-        <ul>
-          <li>Essai randomisé évaluant composition corporelle, fonction musculaire, force</li>
-          <li>Avec ou sans entraînement physique, impact de l'arrêt du traitement</li>
-          <li>Pas encore de résultats</li>
-        </ul>
-
-        <h2>Sécurité (attendue, basée sur profil classe)</h2>
-        <ul>
-          <li>Profil attendu : nausées, vomissements, diarrhée, risque perte excessive poids ou sarcopénie chez sujets fragiles</li>
-          <li>Équilibre bénéfice/risque dépendra des résultats finaux de ces essais</li>
-          <li>Monitoring standard (DSMB, collecte systématique événements indésirables) mais données détaillées tolérance non publiées</li>
-        </ul>
+        <h2>Sécurité</h2>
+        <p>Profil attendu : nausées, vomissements, diarrhée. Risque de perte excessive de poids ou sarcopénie chez sujets fragiles. Données détaillées non publiées.</p>
 
         <h2>Limites</h2>
         <ul>
-          <li>Absence de résultats pour les essais en cours : impossible de conclure sur préservation masse musculaire, fragilité, biomarqueurs vieillissement</li>
-          <li>Généralisation délicate : populations sélectionnées (T1D, obèses motivés, personnes âgées suivies en centres universitaires)</li>
-          <li>Durée limitée pour évaluer effets à long terme sur composition corporelle et fonction physique</li>
+          <li>Absence de résultats pour les essais en cours</li>
+          <li>Populations sélectionnées</li>
+          <li>Généralisation délicate</li>
+          <li>Données à long terme manquantes</li>
         </ul>
 
         <h2>Sources primaires</h2>
-        <ul>
-          <li>ClinicalTrials.gov – NCT06411210 : <a href="https://clinicaltrials.gov/study/NCT06411210" target="_blank" rel="noopener">https://clinicaltrials.gov/study/NCT06411210</a></li>
-          <li>ClinicalTrials.gov – NCT07057310 : <a href="https://clinicaltrials.gov/study/NCT07057310" target="_blank" rel="noopener">https://clinicaltrials.gov/study/NCT07057310</a></li>
-          <li>ClinicalTrials.gov – NCT07091500 : <a href="https://clinicaltrials.gov/study/NCT07091500" target="_blank" rel="noopener">https://clinicaltrials.gov/study/NCT07091500</a></li>
+        <ul class="sources-list">
+          <li>ClinicalTrials.gov – NCT06411210 : <a href="https://clinicaltrials.gov/study/NCT06411210">https://clinicaltrials.gov/study/NCT06411210</a></li>
+          <li>ClinicalTrials.gov – NCT07057310 : <a href="https://clinicaltrials.gov/study/NCT07057310">https://clinicaltrials.gov/study/NCT07057310</a></li>
+          <li>ClinicalTrials.gov – NCT07091500 : <a href="https://clinicaltrials.gov/study/NCT07091500">https://clinicaltrials.gov/study/NCT07091500</a></li>
         </ul>
+
+        <div class="meta">
+          <p><strong>Catégorie :</strong> Métabolique · GLP-1 · <strong>Niveau de preuve :</strong> Essais en cours, aucun résultat</p>
+        </div>
       </article>
 
       <div class="disclaimer">
         <h3>⚠️ Avertissement</h3>
-        <p>Cet article est informatif uniquement. Il ne constitue pas un avis médical. Les essais mentionnés sont en cours sans résultats publiés. Consultez un professionnel de santé qualifié.</p>
+        <p>Les agonistes GLP-1 sont des médicaments sur prescription. Les données présentées concernent des essais en cours et ne constituent pas une recommandation de traitement. Consultez toujours un professionnel de santé qualifié.</p>
       </div>
     </main>
 
     <footer role="contentinfo">
-      <p>Peptides Decoded © 2026 · <a href="/editorial-policy/">Politique éditoriale</a> · <a href="/privacy/">Confidentialité</a></p>
+      <p>Peptides Decoded © 2026 · <a href="/editorial-policy">Politique éditoriale</a> · <a href="/privacy">Confidentialité</a> · <a href="/terms">Conditions</a></p>
     </footer>
   </div>
 </body>
